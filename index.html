@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f2f8f3">
+<title>كاشف الأسعار | Price Checker</title>
+
+<!-- الخطوط: Cairo للنصوص + Changa للعناصر، والأسعار بخط إنجليزي عريض من النظام -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Changa:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- المكتبات الخارجية -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+
+<style>
+/* ============================================================
+   1) المتغيرات — ثيم فاتح مشرق (ملصقات سوبر ماركت)
+   ============================================================ */
+:root{
+  --primary:#0aa06b;
+  --primary-dark:#067a50;
+  --accent:#ffc800;
+  --accent-dark:#e0ad00;
+  --danger:#ef3829;
+  --info:#2f7cf6;
+  --bg:#f2f8f3;
+  --surface:#ffffff;
+  --surface-2:#e9f4ec;
+  --border:rgba(11,52,42,.16);
+  --ink:#0b342a;
+  --ink-soft:#4c6b60;
+  --paper:#ffffff;
+  --shadow:-5px 6px 0 rgba(11,52,42,.13);
+  --shadow-sm:-3px 4px 0 rgba(11,52,42,.13);
+  --radius:14px;
+  --marquee-speed:25s;
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Cairo',sans-serif;
+  color:var(--ink);
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(700px 380px at 95% -6%, rgba(255,200,0,.16), transparent 60%),
+    radial-gradient(700px 420px at -8% 104%, rgba(10,160,107,.14), transparent 58%),
+    radial-gradient(rgba(11,52,42,.055) 1.1px, transparent 1.7px);
+  background-size:auto,auto,22px 22px;
+  background-attachment:fixed;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+.display{font-family:'Changa','Cairo',sans-serif}
+.price-font{font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900;letter-spacing:.2px}
+.mega{font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900}
+::selection{background:var(--accent);color:var(--ink)}
+
+/* ملصقات زخرفية عائمة */
+.float-tag{position:fixed;z-index:0;pointer-events:none;animation:floaty 9s ease-in-out infinite;filter:drop-shadow(-4px 5px 0 rgba(11,52,42,.08))}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-9deg)}50%{transform:translateY(-20px) rotate(-3deg)}}
+
+/* ============================================================
+   2) شاشة التحميل
+   ============================================================ */
+#loadingScreen{
+  position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;gap:22px;
+  align-items:center;justify-content:center;background:var(--bg);
+  background-image:radial-gradient(rgba(11,52,42,.05) 1.1px, transparent 1.7px);background-size:22px 22px;
+  transition:opacity .5s ease, visibility .5s;
+}
+#loadingScreen.hide{opacity:0;visibility:hidden}
+.load-bars{display:flex;gap:5px;align-items:flex-end;height:64px}
+.load-bars span{width:7px;background:var(--primary);border-radius:3px;animation:barPulse 1s ease-in-out infinite}
+.load-bars span:nth-child(even){background:var(--accent)}
+.load-bars span:nth-child(1){height:34px;animation-delay:0s}
+.load-bars span:nth-child(2){height:58px;animation-delay:.1s}
+.load-bars span:nth-child(3){height:26px;animation-delay:.2s}
+.load-bars span:nth-child(4){height:64px;animation-delay:.3s}
+.load-bars span:nth-child(5){height:40px;animation-delay:.4s}
+.load-bars span:nth-child(6){height:55px;animation-delay:.5s}
+.load-bars span:nth-child(7){height:30px;animation-delay:.6s}
+@keyframes barPulse{0%,100%{transform:scaleY(.35);opacity:.55}50%{transform:scaleY(1);opacity:1}}
+#loadingScreen p{font-size:1.05rem;font-weight:800;color:var(--ink-soft)}
+#loadingScreen p::after{content:'…';animation:dots 1.2s steps(4) infinite}
+@keyframes dots{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+
+/* ============================================================
+   3) كاروسيل العروض تحت خانة البحث
+   ============================================================ */
+#offersCarousel{margin-top:14px}
+#offersCarousel.hidden,#offersCarousel.off{display:none}
+.carousel-wrap{position:relative}
+.carousel-stage{
+  position:relative;min-height:118px;border:2.5px solid var(--ink);border-radius:18px;
+  background:linear-gradient(145deg,#fffef8,#fff7d6);box-shadow:var(--shadow);overflow:hidden;
+}
+.carousel-slide{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:14px;
+  padding:18px 20px;opacity:0;transform:translateY(14px) scale(.97);pointer-events:none;
+  transition:opacity .45s ease, transform .45s ease;
+}
+.carousel-slide.active{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.carousel-badge{
+  flex-shrink:0;width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+  background:linear-gradient(150deg,var(--accent),#f5b800);border:2px solid var(--ink);
+  box-shadow:var(--shadow-sm);font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900;font-size:1.05rem;
+}
+.carousel-text{flex:1;min-width:0;text-align:right}
+.carousel-kicker{font-size:.72rem;font-weight:900;color:var(--primary-dark);letter-spacing:.4px;margin-bottom:4px}
+.carousel-title{font-size:clamp(1rem,3.4vw,1.25rem);font-weight:900;line-height:1.35;color:var(--ink)}
+.carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:12px}
+.carousel-dot{
+  width:9px;height:9px;border-radius:50%;border:2px solid var(--ink);background:transparent;cursor:pointer;padding:0;transition:.2s;
+}
+.carousel-dot.active{background:var(--accent);transform:scale(1.2)}
+.carousel-nav{
+  position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--ink);background:#fff;box-shadow:var(--shadow-sm);cursor:pointer;
+  display:grid;place-items:center;font-weight:900;color:var(--ink);z-index:2;transition:.15s;
+}
+.carousel-nav:hover{transform:translateY(-50%) scale(1.08);background:var(--accent)}
+.carousel-nav.prev{inset-inline-start:8px}
+.carousel-nav.next{inset-inline-end:8px}
+.tape{height:9px;background:repeating-linear-gradient(-45deg, var(--primary) 0 14px, var(--ink) 14px 17px, var(--accent) 17px 31px, var(--ink) 31px 34px);border-bottom:2px solid var(--ink)}
+
+/* ============================================================
+   4) الهيدر + اللوجو الواضح
+   ============================================================ */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);border-bottom:2px solid var(--border);backdrop-filter:blur(8px)}
+.logo-box{
+  width:62px;height:62px;border-radius:16px;display:grid;place-items:center;overflow:hidden;flex-shrink:0;
+  background:linear-gradient(150deg,var(--primary),var(--primary-dark));
+  border:2px solid var(--ink);box-shadow:var(--shadow-sm);transform:rotate(-4deg);
+  transition:transform .3s cubic-bezier(.2,1.6,.4,1);
+}
+.logo-box:hover{transform:rotate(4deg) scale(1.07)}
+.logo-box img{width:100%;height:100%;object-fit:cover}
+.logo-box.has-logo{background:#fff;padding:5px;transform:rotate(0)}
+.logo-box.has-logo:hover{transform:scale(1.07)}
+.logo-box.has-logo img{object-fit:contain}
+
+#adminBtn{
+  width:54px;height:54px;padding:0;border-radius:50%;
+  background:linear-gradient(150deg,var(--primary),var(--primary-dark));color:#fff;
+  box-shadow:var(--shadow);
+}
+#adminBtn svg{width:23px;height:23px;transition:transform .45s cubic-bezier(.3,1.4,.4,1)}
+#adminBtn:hover svg{transform:rotate(120deg)}
+.header-logo{display:flex;align-items:center}
+.header-logo img{max-height:var(--logo-h,84px);max-width:calc(var(--logo-h,84px)*3.1);width:auto;height:auto;object-fit:contain;border-radius:8px;filter:drop-shadow(-3px 4px 0 rgba(11,52,42,.12));transition:transform .3s cubic-bezier(.3,1.4,.4,1)}
+.header-logo img:hover{transform:scale(1.06) rotate(-2deg)}
+.chip{
+  display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:999px;
+  background:var(--surface);border:2px solid var(--border);font-size:.82rem;font-weight:800;color:var(--ink);
+  box-shadow:var(--shadow-sm);transition:transform .2s, border-color .2s;
+}
+.chip:hover{border-color:var(--primary);transform:translateY(-2px)}
+
+/* ============================================================
+   5) منطقة البحث (إطار عدسة الماسح) — بأعلى الصفحة
+   ============================================================ */
+.scan-frame{position:relative;padding:16px}
+.corner{position:absolute;width:30px;height:30px;border:5px solid var(--primary);transition:all .3s;animation:cornerPulse 2.6s ease-in-out infinite}
+.corner.tl{top:0;right:0;border-left:none;border-bottom:none;border-radius:0 12px 0 0}
+.corner.tr{top:0;left:0;border-right:none;border-bottom:none;border-radius:12px 0 0 0}
+.corner.bl{bottom:0;right:0;border-left:none;border-top:none;border-radius:0 0 12px 0}
+.corner.br{bottom:0;left:0;border-right:none;border-top:none;border-radius:0 0 0 12px}
+@keyframes cornerPulse{0%,100%{opacity:1}50%{opacity:.45}}
+.scan-frame:focus-within .corner{border-color:var(--accent-dark);width:38px;height:38px;animation:none;opacity:1}
+.scan-wrap{position:relative}
+.scan-line{
+  position:absolute;top:8px;bottom:8px;width:64px;border-radius:10px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(10,160,107,.28),transparent);
+  animation:scan 3.2s ease-in-out infinite;
+}
+@keyframes scan{0%{right:8px;opacity:0}12%{opacity:1}50%{right:calc(100% - 78px)}88%{opacity:1}100%{right:8px;opacity:0}}
+#searchInput{
+  width:100%;padding:19px 58px 19px 126px;font-size:clamp(1.05rem,3.4vw,1.4rem);font-weight:800;font-family:'Changa','Cairo',sans-serif;
+  letter-spacing:1px;background:var(--surface);color:var(--ink);
+  border:2.5px solid var(--ink);border-radius:16px;outline:none;box-shadow:var(--shadow);
+  transition:border-color .25s, box-shadow .25s, transform .25s;
+}
+#searchInput::placeholder{color:#9db4aa;font-family:'Cairo';font-weight:700;font-size:.92rem;letter-spacing:0}
+#searchInput:focus{border-color:var(--primary);box-shadow:-5px 6px 0 rgba(10,160,107,.28);transform:translateY(-2px)}
+.search-icon{position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--primary);pointer-events:none}
+/* أيقونة الكاميرا الصغيرة داخل الخانة */
+.in-camera{
+  position:absolute;left:10px;top:50%;transform:translateY(-50%);width:47px;height:47px;border-radius:13px;
+  border:2px solid var(--ink);background:linear-gradient(150deg,var(--accent),#f5b800);
+  display:grid;place-items:center;color:var(--ink);cursor:pointer;box-shadow:var(--shadow-sm);
+  transition:transform .18s, box-shadow .18s;
+}
+.in-camera:hover{transform:translateY(calc(-50% - 3px)) rotate(-5deg);box-shadow:-6px 7px 0 rgba(11,52,42,.16)}
+.in-camera:active{transform:translateY(calc(-50% + 2px));box-shadow:none}
+.clear-btn{
+  position:absolute;left:67px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;
+  border:2px solid var(--border);background:var(--surface-2);color:var(--ink-soft);cursor:pointer;font-size:1rem;line-height:1;
+  transition:.2s;opacity:0;pointer-events:none;
+}
+.clear-btn.show{opacity:1;pointer-events:auto}
+.clear-btn:hover{background:var(--danger);border-color:var(--danger);color:#fff;transform:translateY(-50%) rotate(90deg)}
+
+/* ============================================================
+   6) الأزرار — ستايل الملصقات بظل صلب
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;border:2px solid var(--ink);cursor:pointer;
+  font-family:'Cairo';font-weight:800;border-radius:13px;padding:13px 22px;font-size:1rem;color:var(--ink);
+  box-shadow:var(--shadow-sm);background:var(--surface);
+  transition:transform .16s, box-shadow .16s, background .16s, filter .16s;
+}
+.btn:hover{transform:translate(2px,-3px);box-shadow:-6px 7px 0 rgba(11,52,42,.16)}
+.btn:active{transform:translate(-2px,3px);box-shadow:0 0 0 rgba(0,0,0,0)}
+.btn-primary{background:linear-gradient(150deg,var(--primary),var(--primary-dark));color:#fff}
+.btn-primary:hover{filter:brightness(1.06)}
+.btn-accent{background:linear-gradient(150deg,var(--accent),#f5b800);color:var(--ink)}
+.btn-danger{background:linear-gradient(150deg,var(--danger),#cf2b1e);color:#fff}
+.btn.sm{padding:9px 15px;font-size:.85rem;border-radius:11px}
+
+/* ============================================================
+   7) نتيجة السعر أسفل خانة البحث — بدون نافذة منبثقة
+   ============================================================ */
+#resultArea{margin-top:8px}
+#resultArea.hidden{display:none}
+#resultCard{animation:resultIn .35s cubic-bezier(.2,1.35,.35,1)}
+@keyframes resultIn{0%{transform:translateY(18px) scale(.97);opacity:0}100%{transform:translateY(0) scale(1);opacity:1}}
+
+/* الفاتورة الورقية */
+.receipt{
+  position:relative;background:var(--paper);color:var(--ink);border-radius:20px 20px 0 0;border:2px solid var(--ink);border-bottom:none;
+  padding:22px 26px 30px;box-shadow:-8px 10px 0 rgba(0,0,0,.18);
+}
+.receipt.has-stamp{padding-top:48px}
+.receipt::after{ /* حافة مقطّعة أسفل الفاتورة */
+  content:'';position:absolute;left:-2px;right:-2px;bottom:-14px;height:15px;
+  background:conic-gradient(from 135deg at 50% 0%, var(--paper) 90deg, transparent 0) 0 0/18px 15px repeat-x;
+  filter:drop-shadow(0 4px 0 rgba(0,0,0,.15));
+}
+.receipt.not-found{background:#fff4f2}
+.receipt.not-found::after{background:conic-gradient(from 135deg at 50% 0%, #fff4f2 90deg, transparent 0) 0 0/18px 15px repeat-x}
+.dash{border:none;border-top:2px dashed #cfd9d3;margin:10px 0}
+
+/* كل الأسعار بخط إنجليزي Bold */
+.price-big{font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900;line-height:.95;color:var(--primary-dark);font-size:clamp(3.8rem,13vw,6.4rem);letter-spacing:-1px}
+.price-big small{font-size:.25em;font-weight:900;color:var(--ink-soft);margin-inline-start:10px;font-family:'Arial Black','Impact',sans-serif}
+.old-price{font-family:'Arial Black','Impact','Changa',sans-serif;text-decoration:line-through;color:var(--danger);font-weight:900;font-size:1.08rem}
+
+/* ختم الخصم الأحمر — من ناحية اليسار */
+.stamp{
+  position:absolute;top:14px;inset-inline-end:18px;transform:rotate(6deg);
+  background:var(--danger);color:#fff;font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900;
+  padding:8px 18px 9px;border-radius:12px;border:3px dashed rgba(255,255,255,.7);outline:2px solid var(--ink);
+  box-shadow:-4px 5px 0 rgba(11,52,42,.25);animation:stampIn .5s cubic-bezier(.2,1.8,.4,1) both .18s;font-size:1.02rem;line-height:1.1;white-space:nowrap;
+}
+@keyframes stampIn{0%{transform:rotate(6deg) scale(2.4);opacity:0}100%{transform:rotate(6deg) scale(1);opacity:1}}
+
+.tag-pill{font-size:.78rem;font-weight:900;padding:5px 14px;border-radius:999px;border:2px solid var(--ink)}
+.tag-pill.unit{background:#e2f5ec;color:var(--primary-dark)}
+.tag-pill.offer{background:#fdeceb;color:var(--danger)}
+.tag-pill.code{background:#fffbe8;color:var(--ink)}
+.tag-pill.merchant{background:#eef7fb;color:#1d5c82}
+
+/* بطاقة تفاصيل الخصم (قبل / بعد / وفّرت / النسبة) */
+.breakdown{
+  min-width:230px;flex:1;max-width:290px;background:#f0faf4;border:2px dashed rgba(10,160,107,.5);
+  border-radius:15px;padding:13px 17px;
+}
+.b-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:7px 0;font-size:.9rem;font-weight:800;border-bottom:2px dotted rgba(11,52,42,.16)}
+.b-row:last-child{border-bottom:none}
+.b-row span{color:var(--ink-soft)}
+.b-row b{font-family:'Arial Black','Impact','Changa',sans-serif;font-weight:900;font-size:1.02rem}
+.b-row.save b{background:#cdeedd;color:var(--primary-dark);padding:2px 12px;border-radius:9px;border:1.5px solid rgba(6,122,80,.35)}
+
+/* شريط المؤقت الأزرق */
+.timer-track{height:8px;background:rgba(11,52,42,.1);border-radius:99px;overflow:hidden;margin-top:18px;border:1.5px solid rgba(11,52,42,.14)}
+#timerBarFill{height:100%;width:100%;background:linear-gradient(90deg,#2f7cf6,#6aa5ff);border-radius:99px}
+.timer-hint{font-size:.78rem;color:var(--ink-soft);font-weight:800;margin-top:8px;text-align:center}
+
+/* ============================================================
+   8) لوحة التحكم (درج جانبي)
+   ============================================================ */
+#drawerOverlay{position:fixed;inset:0;background:rgba(11,52,42,.45);z-index:60;opacity:0;visibility:hidden;transition:.3s}
+#drawerOverlay.show{opacity:1;visibility:visible}
+#adminPanel{
+  position:fixed;top:0;bottom:0;inset-inline-start:0;width:min(440px,100%);z-index:70;
+  background:var(--surface);border-inline-end:2px solid var(--ink);
+  transform:translateX(105%);transition:transform .38s cubic-bezier(.3,1,.3,1);
+  display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(11,52,42,.2);
+}
+#adminPanel.open{transform:translateX(0) !important}
+.tabs-row{display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:2px solid var(--border);background:var(--surface-2)}
+.tabs-row::-webkit-scrollbar{display:none}
+.tab-btn{
+  flex:1;min-width:70px;padding:12px 6px;font-size:.78rem;font-weight:900;border:none;cursor:pointer;
+  background:transparent;color:var(--ink-soft);border-bottom:4px solid transparent;transition:.2s;font-family:'Cairo';white-space:nowrap;
+}
+.tab-btn:hover{color:var(--ink);background:rgba(255,200,0,.15)}
+.tab-btn.active{color:var(--ink);border-bottom-color:var(--accent-dark);background:rgba(255,200,0,.22)}
+.tab-section{display:none;padding:22px;overflow-y:auto;flex:1}
+.tab-section.active{display:block;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.85rem;font-weight:900;color:var(--ink);margin-bottom:7px}
+.field input[type=text],.field input[type=password],.field input[type=number],.field input[type=url],.field select{
+  width:100%;padding:11px 14px;background:var(--surface);border:2px solid var(--border);border-radius:11px;
+  color:var(--ink);font-family:'Cairo';font-weight:700;font-size:.92rem;outline:none;transition:border-color .2s, box-shadow .2s;
+}
+.field input:focus,.field select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(10,160,107,.16)}
+.field input[type=range]{width:100%;accent-color:var(--primary)}
+.field input[type=color]{width:60px;height:44px;padding:3px;background:var(--surface);border:2px solid var(--border);border-radius:10px;cursor:pointer}
+.field input[type=checkbox]{accent-color:var(--primary);width:19px;height:19px}
+.hint{font-size:.76rem;color:var(--ink-soft);line-height:1.8;margin-top:6px;font-weight:700}
+.list-item{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 14px;
+  background:var(--surface);border:2px solid var(--border);border-radius:12px;margin-bottom:8px;
+  font-size:.88rem;font-weight:800;box-shadow:var(--shadow-sm);animation:fadeUp .25s ease;transition:transform .2s;
+}
+.list-item:hover{transform:translateX(-3px)}
+.list-item button{border:none;background:transparent;color:var(--danger);cursor:pointer;font-size:1rem;transition:transform .2s}
+.list-item button:hover{transform:scale(1.35)}
+.drop-zone{
+  border:2.5px dashed rgba(10,160,107,.55);border-radius:16px;padding:28px 16px;text-align:center;cursor:pointer;background:#f4fbf7;
+  transition:border-color .25s, background .25s, transform .2s;
+}
+.drop-zone:hover,.drop-zone.drag{border-color:var(--accent-dark);background:#fffbe8;transform:scale(1.01)}
+table.prod-table{width:100%;border-collapse:collapse;font-size:.76rem}
+.prod-table th{position:sticky;top:0;background:var(--accent);color:var(--ink);padding:9px 6px;text-align:right;font-weight:900;border-bottom:2px solid var(--ink)}
+.prod-table td{padding:8px 6px;border-bottom:1px solid var(--border);color:var(--ink-soft);font-weight:700}
+.prod-table tr:hover td{color:var(--ink);background:#f4fbf7}
+.swatch{width:58px;height:46px;border-radius:12px;border:2px solid var(--border);cursor:pointer;transition:transform .2s, border-color .2s;box-shadow:var(--shadow-sm)}
+.swatch:hover{transform:translateY(-3px)}
+.swatch.active{border-color:var(--ink);box-shadow:0 0 0 3px rgba(255,200,0,.55)}
+.logo-preview{width:64px;height:64px;border:2px solid var(--border);border-radius:14px;background:#fff;padding:5px;object-fit:contain}
+
+/* ============================================================
+   9) النوافذ المنبثقة + التنبيهات
+   ============================================================ */
+.modal-backdrop{position:fixed;inset:0;z-index:80;background:rgba(11,52,42,.5);display:grid;place-items:center;padding:16px;opacity:0;visibility:hidden;transition:.25s}
+.modal-backdrop.show{opacity:1;visibility:visible}
+.modal{background:var(--surface);border:2px solid var(--ink);border-radius:20px;width:min(480px,100%);padding:26px;box-shadow:-8px 10px 0 rgba(11,52,42,.18);transform:scale(.92);transition:transform .3s cubic-bezier(.2,1.4,.4,1)}
+.modal-backdrop.show .modal{transform:scale(1)}
+.modal.shake{animation:shake .45s}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-7px)}80%{transform:translateX(7px)}}
+#qr-reader{width:100%;border-radius:14px;overflow:hidden;background:#0b342a;min-height:260px;border:2px solid var(--ink)}
+#qr-reader video{border-radius:12px}
+
+#toasts{position:fixed;bottom:18px;inset-inline-start:18px;z-index:95;display:flex;flex-direction:column;gap:10px;max-width:min(360px,90vw)}
+.toast{
+  background:var(--surface);border:2px solid var(--ink);border-inline-start:7px solid var(--primary);
+  padding:13px 18px;border-radius:14px;font-weight:800;font-size:.9rem;box-shadow:var(--shadow);
+  animation:toastIn .35s cubic-bezier(.2,1.4,.4,1);color:var(--ink);
+}
+.toast.error{border-inline-start-color:var(--danger)}
+.toast.warn{border-inline-start-color:var(--accent-dark)}
+@keyframes toastIn{from{opacity:0;transform:translateY(18px) scale(.95)}to{opacity:1;transform:none}}
+.toast.out{animation:toastOut .3s forwards}
+@keyframes toastOut{to{opacity:0;transform:translateY(12px)}}
+
+/* ============================================================
+   10) استجابة الموبايل والكمبيوتر
+   ============================================================ */
+@media (max-width:640px){
+  .logo-box{width:50px;height:50px}
+  #searchInput{padding:16px 48px 16px 112px}
+  .scan-frame{padding:12px}
+  .corner{width:24px;height:24px;border-width:4px}
+  .in-camera{width:42px;height:42px}
+  .clear-btn{left:60px}
+  .receipt{padding:20px 16px 28px}
+  .receipt.has-stamp{padding-top:44px}
+  .btn{padding:12px 18px}
+  .tab-section{padding:16px}
+  .stamp{top:12px;inset-inline-end:12px;font-size:.9rem;padding:7px 12px 8px}
+  .float-tag{display:none}
+  .breakdown{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ملصقات زخرفية -->
+<div class="float-tag" style="top:17%;inset-inline-start:3%;opacity:.55">
+  <svg width="110" height="110" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--ink)" stroke-width="1.2"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.8" fill="#fff" stroke="var(--ink)"/></svg>
+</div>
+<div class="float-tag" style="bottom:12%;inset-inline-end:3.5%;opacity:.4;animation-delay:-4s">
+  <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.4"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.8"/></svg>
+</div>
+
+<!-- ================= شاشة التحميل ================= -->
+<div id="loadingScreen">
+  <div class="load-bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <p>جاري تحميل البيانات</p>
+</div>
+
+<!-- ================= شريط العروض ================= -->
+<div id="offersMarquee"><div class="marquee-track" id="marqueeTrack"></div></div>
+<div class="tape" aria-hidden="true"></div>
+
+<!-- ================= الهيدر ================= -->
+<header>
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-3 sm:gap-4 flex-wrap">
+    <div class="logo-box" id="logoBox" title="كاشف الأسعار">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5" fill="#fff"/></svg>
+    </div>
+    <div class="flex-1 min-w-[140px]">
+      <h1 class="display text-xl sm:text-2xl font-extrabold leading-none">كاشف <span style="color:var(--primary)">الأسعار</span></h1>
+      <p class="text-[11px] sm:text-xs font-bold mt-1" style="color:var(--ink-soft)">امسح QR… والسعر يظهر فورًا</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="header-logo hidden" id="headerLogo" title="شعار المحل"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= المحتوى ================= -->
+<main class="max-w-5xl mx-auto px-4 pt-4 sm:pt-7 pb-10 relative z-10 flex flex-col" style="min-height:calc(100dvh - 235px)">
+
+  <section class="max-w-2xl mx-auto">
+    <!-- عنوان صغير فوق الخانة مباشرة -->
+    <div class="flex items-end justify-between mb-1 px-1">
+      <label for="searchInput" class="text-sm sm:text-base font-black" style="color:var(--ink)">
+        <span style="color:var(--primary)">▍</span> مرر QR أو اكتب كود الصنف
+      </label>
+      <span class="text-[11px] sm:text-xs font-bold hidden xs:block" style="color:var(--ink-soft)">يظهر السعر <b class="display dur-label" style="color:var(--primary-dark)">8</b> ثوانٍ</span>
+    </div>
+
+    <!-- إطار عدسة الماسح -->
+    <div class="scan-frame">
+      <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+      <div class="scan-wrap">
+        <span class="scan-line"></span>
+        <span class="search-icon">
+          <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 14h2v2h-2zM18 14h2M14 18h6M18 20v-2"/></svg>
+        </span>
+        <input id="searchInput" type="text" inputmode="numeric" autocomplete="off" placeholder="مثال: 62210008" aria-label="كود الصنف">
+        <button class="clear-btn" id="clearBtn" title="مسح">✕</button>
+        <button class="in-camera" id="cameraBtn" title="مسح بالكاميرا" aria-label="مسح بالكاميرا">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- كاروسيل العروض (3 كروت متناوبة) -->
+    <div id="offersCarousel">
+      <div class="carousel-wrap">
+        <div class="carousel-stage" id="carouselStage"></div>
+        <button class="carousel-nav prev" id="carouselPrev" type="button" aria-label="السابق">‹</button>
+        <button class="carousel-nav next" id="carouselNext" type="button" aria-label="التالي">›</button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+
+    <!-- النتيجة تظهر هنا مباشرة أسفل كتابة الكود -->
+    <div id="resultArea" class="hidden">
+      <div id="resultCard"></div>
+    </div>
+    <!-- حالة الاستعداد -->
+    <div id="idleState" class="mt-6 text-center py-6" style="color:var(--ink-soft)">
+      <svg class="mx-auto mb-4" style="opacity:.55" width="96" height="96" viewBox="0 0 96 96" fill="none"><rect x="8" y="8" width="30" height="30" rx="4" fill="var(--primary)"/><rect x="16" y="16" width="14" height="14" rx="2" fill="#fff"/><rect x="58" y="8" width="30" height="30" rx="4" fill="var(--primary)"/><rect x="66" y="16" width="14" height="14" rx="2" fill="#fff"/><rect x="8" y="58" width="30" height="30" rx="4" fill="var(--primary)"/><rect x="16" y="66" width="14" height="14" rx="2" fill="#fff"/><rect x="58" y="58" width="10" height="10" fill="var(--primary)"/><rect x="76" y="58" width="12" height="12" fill="var(--primary)"/><rect x="58" y="76" width="30" height="10" fill="var(--primary)"/><rect x="74" y="72" width="10" height="10" fill="var(--primary)"/></svg>
+      <p class="font-extrabold text-lg sm:text-xl" style="color:var(--ink)">في انتظار مسح الصنف…</p>
+      <p class="text-sm mt-1 font-bold">السعر يظهر لمدة <b class="display dur-label" style="color:var(--primary-dark)">8</b> ثوانٍ ثم تختفي الشاشة تلقائيًا</p>
+    </div>
+  </section>
+
+  <!-- ترس الإعدادات — أسفل نهاية الصفحة من ناحية الشمال -->
+  <div class="mt-auto pt-10 flex justify-end">
+    <button class="btn sm" id="adminBtn" title="الإعدادات" aria-label="الإعدادات">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h.01a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v.01a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1Z"/></svg>
+    </button>
+  </div>
+</main>
+
+<!-- ================= نافذة الكاميرا ================= -->
+<div class="modal-backdrop" id="cameraModal">
+  <div class="modal">
+    <div class="flex items-center justify-between mb-4">
+      <h3 class="display text-xl font-extrabold">📷 مسح QR</h3>
+      <button class="btn sm" id="closeCamera">إغلاق</button>
+    </div>
+    <div id="qr-reader"></div>
+    <p class="hint text-center mt-3">وجّه الكاميرا نحو رمز QR — يتم البحث تلقائيًا فور القراءة</p>
+  </div>
+</div>
+
+<!-- ================= نافذة كلمة المرور ================= -->
+<div class="modal-backdrop" id="loginModal">
+  <div class="modal" id="loginBox">
+    <h3 class="display text-xl font-extrabold mb-4">🔒 لوحة التحكم</h3>
+    <div class="field">
+      <input type="password" id="loginPass" placeholder="كلمة المرور">
+    </div>
+    <div class="flex gap-2">
+      <button class="btn btn-primary flex-1" id="loginSubmit">دخول</button>
+      <button class="btn" id="loginCancel">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= لوحة التحكم ================= -->
+<div id="drawerOverlay"></div>
+<aside id="adminPanel" aria-label="لوحة التحكم">
+  <div class="flex items-center justify-between px-5 py-4" style="border-bottom:2px solid var(--border)">
+    <h2 class="display text-lg font-extrabold">⚙️ لوحة التحكم</h2>
+    <div class="flex gap-2">
+      <button class="btn sm" id="lockBtn" title="قفل">🔒</button>
+      <button class="btn sm" id="closeAdmin">✕</button>
+    </div>
+  </div>
+
+  <div class="tabs-row">
+    <button class="tab-btn active" data-tab="tab-data">البيانات</button>
+    <button class="tab-btn" data-tab="tab-look">المظهر</button>
+    <button class="tab-btn" data-tab="tab-offers">العروض</button>
+    <button class="tab-btn" data-tab="tab-disc">الخصومات</button>
+    <button class="tab-btn" data-tab="tab-prefs">الإعدادات</button>
+    <button class="tab-btn" data-tab="tab-github">GitHub</button>
+  </div>
+
+  <!-- تبويب البيانات -->
+  <div class="tab-section active" id="tab-data">
+    <div class="drop-zone" id="dropZone">
+      <svg class="mx-auto mb-2" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
+      <p class="font-extrabold">اسحب ملف Excel هنا أو اضغط للاختيار</p>
+      <p class="hint mt-1">الأعمدة: A كود الصنف · B كود التاجر · C الاسم · D الوحدة · E سعر البيع · F السعر الأصلي · G المجموعة</p>
+    </div>
+    <input type="file" id="excelFile" accept=".xlsx,.xls,.csv" class="hidden">
+    <div class="flex gap-2 mt-4 flex-wrap">
+      <button class="btn sm" id="templateBtn">⬇️ قالب Excel</button>
+      <button class="btn sm" id="exportBtn">⬇️ تنزيل data.json</button>
+      <button class="btn btn-danger sm" id="clearProducts">🗑️ مسح الأصناف</button>
+    </div>
+    <p class="hint mt-4">إجمالي الأصناف: <b class="display" id="prodCount" style="color:var(--primary-dark)">0</b></p>
+    <div class="mt-2 rounded-xl overflow-hidden" style="border:2px solid var(--border);max-height:280px;overflow-y:auto">
+      <table class="prod-table"><thead><tr><th>الكود</th><th>الاسم</th><th>السعر</th><th>المجموعة</th></tr></thead><tbody id="prodTable"></tbody></table>
+    </div>
+  </div>
+
+  <!-- تبويب المظهر -->
+  <div class="tab-section" id="tab-look">
+    <div class="field">
+      <label>شعار المحل</label>
+      <div class="flex gap-3 items-center flex-wrap">
+        <img id="logoPreview" class="logo-preview hidden" alt="معاينة اللوجو">
+        <input type="file" id="logoFile" accept="image/*" class="hidden">
+        <button class="btn sm" onclick="document.getElementById('logoFile').click()">🖼️ رفع لوجو</button>
+        <button class="btn sm" id="removeLogo">إزالة</button>
+      </div>
+      <p class="hint">يظهر اللوجو بشكل حر بجوار «كاشف الأسعار» أعلى الصفحة</p>
+    </div>
+    <div class="field">
+      <label>📏 حجم اللوجو: <b class="display" id="logoSizeVal" style="color:var(--primary-dark)">84</b> بكسل</label>
+      <input type="range" id="logoSize" min="40" max="160" value="84">
+      <p class="hint">اسحب لتكبير أو تصغير اللوجو — يُحفظ التغيير تلقائيًا</p>
+    </div>
+    <div class="field">
+      <label>خلفية الشاشة</label>
+      <div class="flex gap-2 flex-wrap" id="bgSwatches"></div>
+      <div class="flex gap-2 items-center mt-3 flex-wrap">
+        <input type="color" id="bgColor" value="#f2f8f3" title="لون مخصص">
+        <button class="btn sm" id="bgColorApply">تطبيق لون مخصص</button>
+        <input type="file" id="bgImage" accept="image/*" class="hidden">
+        <button class="btn sm" onclick="document.getElementById('bgImage').click()">📁 صورة خلفية</button>
+      </div>
+    </div>
+    <div class="field">
+      <label>ألوان النظام</label>
+      <div class="flex gap-4 items-center flex-wrap">
+        <span class="flex items-center gap-2 text-sm font-extrabold">الأساسي <input type="color" id="primaryColor" value="#0aa06b"></span>
+        <span class="flex items-center gap-2 text-sm font-extrabold">المميز <input type="color" id="accentColor" value="#ffc800"></span>
+        <button class="btn sm" id="resetColors">استرجاع الافتراضي</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- تبويب العروض -->
+  <div class="tab-section" id="tab-offers">
+    <div class="field flex items-center justify-between" style="background:var(--surface-2);padding:13px 15px;border-radius:12px;border:2px solid var(--border)">
+      <label class="mb-0" style="margin:0">تشغيل كاروسيل العروض</label>
+      <input type="checkbox" id="marqueeOn" checked>
+    </div>
+    <div class="field mt-4">
+      <label>مدة تبديل العرض: <b class="display" id="speedVal" style="color:var(--primary-dark)">4</b> ثوانٍ</label>
+      <input type="range" id="marqueeSpeed" min="2" max="10" value="4">
+      <p class="hint">الكروت تتبدل تلقائيًا كل عدد الثواني المحدد</p>
+    </div>
+    <div class="field">
+      <label>إضافة عرض جديد</label>
+      <div class="flex gap-2">
+        <input type="text" id="offerInput" placeholder="مثال: خصم 30% على الأحذية">
+        <button class="btn btn-primary sm" id="addOffer">إضافة</button>
+      </div>
+      <p class="hint">يُعرض حتى 3 عروض في الكاروسيل بشكل متناوب</p>
+    </div>
+    <div id="offersList"></div>
+  </div>
+
+  <!-- تبويب الخصومات -->
+  <div class="tab-section" id="tab-disc">
+    <p class="hint mb-4">خصم على مجموعة كاملة — يُحسب السعر النهائي تلقائيًا مع <b>التقريب لأقرب 5 جنيهات</b>. (الخصومات تُحسب من الفرق بين السعر الأصلي وسعر البيع في ملف Excel)</p>
+    <div class="field">
+      <label>المجموعة</label>
+      <input type="text" id="discGroup" list="groupsList" placeholder="اسم المجموعة (مثال: أحذية)">
+      <datalist id="groupsList"></datalist>
+    </div>
+    <div class="field">
+      <label>نسبة الخصم %</label>
+      <input type="number" id="discPct" min="0" max="90" placeholder="مثال: 30">
+    </div>
+    <button class="btn btn-primary w-full" id="addDisc">➕ تطبيق الخصم</button>
+    <div id="discList" class="mt-4"></div>
+  </div>
+
+  <!-- تبويب الإعدادات -->
+  <div class="tab-section" id="tab-prefs">
+    <div class="field">
+      <label>⏱️ مدة ظهور السعر (بالثواني)</label>
+      <div class="flex items-center gap-3">
+        <input type="range" id="priceDuration" min="3" max="30" value="8" class="flex-1">
+        <input type="number" id="priceDurationNum" min="3" max="30" value="8" style="width:86px;text-align:center" class="display">
+      </div>
+      <p class="hint">بعد انتهاء المدة تُخفى شاشة السعر وتُمسح خانة البحث وتصبح جاهزة للمسح التالي</p>
+    </div>
+    <div class="field flex items-center justify-between" style="background:var(--surface-2);padding:13px 15px;border-radius:12px;border:2px solid var(--border)">
+      <label class="mb-0" style="margin:0">أصوات التنبيه</label>
+      <input type="checkbox" id="soundOn" checked>
+    </div>
+    <div class="field mt-4">
+      <label>تغيير كلمة المرور</label>
+      <div class="flex gap-2">
+        <input type="password" id="newPass" placeholder="كلمة مرور جديدة (4 أحرف على الأقل)">
+        <button class="btn btn-primary sm" id="savePass">حفظ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- تبويب GitHub -->
+  <div class="tab-section" id="tab-github">
+    <p class="hint mb-4">انشر البيانات إلى مستودع GitHub (ملف <b class="display">data.json</b>) لتتزامن تلقائيًا مع كل الأجهزة التي تفتح الصفحة. تحتاج Token بصلاحيات <b>repo</b>.</p>
+    <div class="field"><label>اسم المستخدم (User)</label><input type="text" id="ghUser" placeholder="username"></div>
+    <div class="field"><label>المستودع (Repo)</label><input type="text" id="ghRepo" placeholder="my-shop-prices"></div>
+    <div class="field"><label>الفرع (Branch)</label><input type="text" id="ghBranch" value="main"></div>
+    <div class="field"><label>التوكن (Token)</label><input type="password" id="ghToken" placeholder="ghp_xxxxxxxx">
+      <p class="hint">⚠️ يُحفظ التوكن في متصفح هذا الجهاز فقط</p>
+    </div>
+    <div class="flex gap-2 flex-wrap">
+      <button class="btn sm" id="ghTest">🔌 اختبار الاتصال</button>
+      <button class="btn sm" id="ghPull">⬇️ جلب البيانات الآن</button>
+      <button class="btn btn-primary flex-1" id="ghPublish">🚀 نشر التغييرات</button>
+    </div>
+    <p class="hint mt-3" id="ghStatus">آخر مزامنة: —</p>
+  </div>
+</aside>
+
+<div id="toasts"></div>
+
+<script>
+/* ============================================================
+   الحالة العامة للتطبيق — كل البيانات تعيش هنا
+   ============================================================ */
+const appState = {
+  products: [],                       // [{itemCode,merchantCode,name,unit,price,originalPrice,group}]
+  offers: [],                         // نصوص شريط العروض
+  groupDiscounts: {},                 // { 'أحذية': 30 }
+  settings: {
+    password: '1234',
+    priceDuration: 8,                 // مدة ظهور السعر بالثواني
+    marqueeEnabled: true,
+    marqueeSpeed: 4,                  // ثوانٍ بين كروت الكاروسيل
+    sound: true,
+    primary: '#0aa06b',
+    accent: '#ffc800',
+    logo: '',                         // dataURL
+    background: { type:'preset', value:'mint' },
+    github: { user:'', repo:'', branch:'main', token:'' }
+  },
+  meta: { updatedAt:null, source:'local' }
+};
+let adminAuthed = false, timerId = null, countdownId = null, scanner = null, audioCtx = null;
+let carouselIndex = 0, carouselTimer = null;
+
+const LS_SETTINGS = 'pc_settings_v1', LS_DATA = 'pc_data_v1';
+
+/* ---------- أصناف تجريبية تظهر عند أول تشغيل ---------- */
+const SAMPLE_PRODUCTS = [
+  {itemCode:'62210001', merchantCode:'M-101', name:'أرز أبيض فاخر 5 كجم', unit:'كيس',   price:185, originalPrice:210, group:'بقالة'},
+  {itemCode:'62210002', merchantCode:'M-102', name:'زيت عباد الشمس 1 لتر', unit:'زجاجة', price:65,  originalPrice:75,  group:'بقالة'},
+  {itemCode:'62210003', merchantCode:'M-103', name:'سكر ناعم 1 كجم',       unit:'كيس',   price:35,  originalPrice:38,  group:'بقالة'},
+  {itemCode:'62210004', merchantCode:'M-104', name:'شاي فتلة 250 جم',      unit:'علبة',  price:52,  originalPrice:52,  group:'مشروبات'},
+  {itemCode:'62210005', merchantCode:'M-105', name:'عصير مانجو 1 لتر',     unit:'عبوة',  price:40,  originalPrice:48,  group:'مشروبات'},
+  {itemCode:'62210006', merchantCode:'M-106', name:'شامبو بالأعشاب 400مل', unit:'عبوة',  price:99,  originalPrice:120, group:'عناية'},
+  {itemCode:'62210007', merchantCode:'M-107', name:'صابون سائل 500مل',     unit:'عبوة',  price:30,  originalPrice:30,  group:'عناية'},
+  {itemCode:'62210008', merchantCode:'M-108', name:'حذاء رياضي خفيف',      unit:'زوج',   price:480, originalPrice:550, group:'أحذية'},
+  {itemCode:'62210009', merchantCode:'M-109', name:'شبشب منزلي',           unit:'زوج',   price:75,  originalPrice:90,  group:'أحذية'},
+  {itemCode:'62210010', merchantCode:'M-110', name:'مكرونة 400 جم',        unit:'كيس',   price:14,  originalPrice:15,  group:'بقالة'},
+];
+const SAMPLE_OFFERS = ['خصم 30% على جميع الأحذية','اشتري قطعة واحصل على الثانية بنصف السعر','عروض البقالة كل يوم جمعة','التوصيل مجاني للطلبات فوق 500 جنيه'];
+
+/* ---------- خلفيات جاهزة (فاتحة) ---------- */
+const BG_PRESETS = {
+  mint:{name:'نعناع', css:'radial-gradient(700px 380px at 95% -6%, rgba(255,200,0,.16), transparent 60%), radial-gradient(700px 420px at -8% 104%, rgba(10,160,107,.14), transparent 58%), #f2f8f3'},
+  sky:{name:'سماوي', css:'radial-gradient(700px 380px at 95% -6%, rgba(47,124,246,.14), transparent 60%), radial-gradient(700px 420px at -8% 104%, rgba(56,189,248,.16), transparent 58%), #eef7fb'},
+  sunny:{name:'مشمش', css:'radial-gradient(700px 380px at 95% -6%, rgba(255,170,0,.2), transparent 60%), radial-gradient(700px 420px at -8% 104%, rgba(255,200,0,.18), transparent 58%), #fdf9ee'},
+  rose:{name:'وردي', css:'radial-gradient(700px 380px at 95% -6%, rgba(244,114,130,.16), transparent 60%), radial-gradient(700px 420px at -8% 104%, rgba(251,168,180,.16), transparent 58%), #fdf3f4'}
+};
+
+/* ============================================================
+   أدوات مساعدة
+   ============================================================ */
+const $  = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const normDigits = s => String(s).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+const toNum = v => { const n = parseFloat(normDigits(String(v)).replace(/[^\d.-]/g,'')); return isNaN(n)?0:n; };
+const fmt = n => Number.isInteger(n) ? n.toLocaleString('en-US') : n.toLocaleString('en-US',{maximumFractionDigits:2});
+
+/* التقريب لأقرب 5 جنيهات */
+function calculateDiscountedPrice(price){ return Math.round(price/5)*5; }
+
+function toast(msg, type='ok'){
+  const el = document.createElement('div');
+  el.className = 'toast' + (type==='error'?' error':type==='warn'?' warn':'');
+  el.innerHTML = msg;
+  $('#toasts').appendChild(el);
+  setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(),320); }, 3600);
+}
+
+function beep(freq=1000, dur=.12, type='sine', delay=0){
+  if(!appState.settings.sound) return;
+  try{
+    audioCtx = audioCtx || new (window.AudioContext||window.webkitAudioContext)();
+    const t = audioCtx.currentTime + delay;
+    const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+    o.type = type; o.frequency.value = freq;
+    g.gain.setValueAtTime(.001,t); g.gain.exponentialRampToValueAtTime(.22,t+.02); g.gain.exponentialRampToValueAtTime(.001,t+dur);
+    o.connect(g); g.connect(audioCtx.destination);
+    o.start(t); o.stop(t+dur+.05);
+  }catch(e){}
+}
+const beepOK = ()=>{ beep(1150,.09); beep(1550,.12,'sine',.1); };
+const beepErr = ()=> beep(200,.3,'square');
+
+/* ============================================================
+   الحفظ والتحميل (localStorage)
+   ============================================================ */
+function saveSettings(){ localStorage.setItem(LS_SETTINGS, JSON.stringify(appState.settings)); }
+function loadSettings(){
+  try{ const s = JSON.parse(localStorage.getItem(LS_SETTINGS)); if(s) appState.settings = Object.assign(appState.settings, s); }catch(e){}
+}
+function saveLocalData(){
+  localStorage.setItem(LS_DATA, JSON.stringify({products:appState.products, offers:appState.offers, groupDiscounts:appState.groupDiscounts, meta:appState.meta}));
+}
+function loadLocalData(){
+  try{
+    const d = JSON.parse(localStorage.getItem(LS_DATA));
+    if(d && Array.isArray(d.products) && d.products.length){
+      appState.products = d.products; appState.offers = d.offers||[]; appState.groupDiscounts = d.groupDiscounts||{}; appState.meta = d.meta||appState.meta;
+    }else{
+      appState.products = SAMPLE_PRODUCTS.slice(); appState.offers = SAMPLE_OFFERS.slice();
+      appState.groupDiscounts = {'أحذية':30,'عناية':10};
+      saveLocalData();
+    }
+  }catch(e){ appState.products = SAMPLE_PRODUCTS.slice(); appState.offers = SAMPLE_OFFERS.slice(); appState.groupDiscounts={'أحذية':30,'عناية':10}; }
+}
+
+/* ============================================================
+   المظهر: الألوان + الخلفية + اللوجو الواضح
+   ============================================================ */
+function applyTheme(){
+  const s = appState.settings, r = document.documentElement.style;
+  r.setProperty('--primary', s.primary);
+  r.setProperty('--accent', s.accent);
+  applyBackground();
+  /* اللوجو المرفوع يظهر بشكل حر في الهيدر — أيقونة «كاشف الأسعار» ثابتة لا تتغير */
+  const hl = $('#headerLogo');
+  hl.style.setProperty('--logo-h', (s.logoSize||84)+'px');
+  if(s.logo){
+    hl.innerHTML = `<img src="${s.logo}" alt="شعار المحل">`;
+    hl.classList.remove('hidden');
+    $('#logoPreview').src = s.logo; $('#logoPreview').classList.remove('hidden');
+  }else{
+    hl.innerHTML = '';
+    hl.classList.add('hidden');
+    $('#logoPreview').classList.add('hidden');
+  }
+}
+function applyBackground(){
+  const bg = appState.settings.background;
+  document.body.style.backgroundAttachment='fixed';
+  if(bg.type==='image') document.body.style.backgroundImage = `linear-gradient(rgba(255,255,255,.8),rgba(255,255,255,.86)), url(${bg.value})`, `radial-gradient(rgba(11,52,42,.05) 1.1px, transparent 1.7px)`;
+  else if(bg.type==='color'){
+    document.body.style.backgroundImage = `radial-gradient(700px 380px at 95% -6%, rgba(255,255,255,.6), transparent 60%), radial-gradient(rgba(11,52,42,.055) 1.1px, transparent 1.7px)`;
+    document.body.style.backgroundColor = bg.value;
+  }
+  else{
+    const p = (BG_PRESETS[bg.value]||BG_PRESETS.mint).css;
+    const parts = p.split(/,(?![^(]*\))/);
+    document.body.style.backgroundImage = parts.slice(0,-1).join(',').trim() + ', radial-gradient(rgba(11,52,42,.055) 1.1px, transparent 1.7px)';
+    document.body.style.backgroundColor = parts[parts.length-1].trim();
+  }
+  document.body.style.backgroundSize = 'auto,auto,22px 22px';
+}
+function renderBgSwatches(){
+  const wrap = $('#bgSwatches'); wrap.innerHTML='';
+  Object.entries(BG_PRESETS).forEach(([key,p])=>{
+    const b = document.createElement('button');
+    b.className = 'swatch' + (appState.settings.background.type==='preset'&&appState.settings.background.value===key?' active':'');
+    b.style.background = p.css; b.title = p.name;
+    b.onclick = ()=>{ appState.settings.background={type:'preset',value:key}; document.body.style.backgroundColor=''; applyBackground(); saveSettings(); renderBgSwatches(); };
+    wrap.appendChild(b);
+  });
+}
+
+/* ============================================================
+   كاروسيل العروض (3 كروت متناوبة)
+   ============================================================ */
+function getCarouselOffers(){
+  return appState.offers.slice(0, 3);
+}
+function stopCarousel(){
+  clearInterval(carouselTimer);
+  carouselTimer = null;
+}
+function showCarouselIfIdle(){
+  const carousel = $('#offersCarousel');
+  if(!carousel) return;
+  const hasQuery = !!($('#searchInput')?.value || '').trim();
+  const showingResult = !$('#resultArea').classList.contains('hidden');
+  const offers = getCarouselOffers();
+  const enabled = appState.settings.marqueeEnabled && offers.length>0 && !hasQuery && !showingResult;
+  carousel.classList.toggle('hidden', !enabled);
+  carousel.classList.toggle('off', !appState.settings.marqueeEnabled || offers.length===0);
+  /* لو الكاروسيل ظاهر نخفي حالة الانتظار لتبقى الشاشة أنظف */
+  if(!showingResult){
+    $('#idleState').classList.toggle('hidden', enabled);
+  }
+  if(enabled) startCarousel(); else stopCarousel();
+}
+function startCarousel(){
+  stopCarousel();
+  const offers = getCarouselOffers();
+  if(!appState.settings.marqueeEnabled || !offers.length) return;
+  const delay = Math.max(2, Math.min(10, +appState.settings.marqueeSpeed || 4)) * 1000;
+  carouselTimer = setInterval(()=>{
+    carouselIndex = (carouselIndex + 1) % offers.length;
+    updateCarouselSlide();
+  }, delay);
+}
+function updateCarouselSlide(){
+  const slides = $$('#carouselStage .carousel-slide');
+  const dots = $$('#carouselDots .carousel-dot');
+  if(!slides.length) return;
+  carouselIndex = ((carouselIndex % slides.length) + slides.length) % slides.length;
+  slides.forEach((s,i)=> s.classList.toggle('active', i===carouselIndex));
+  dots.forEach((d,i)=> d.classList.toggle('active', i===carouselIndex));
+}
+function renderMarquee(){
+  const offers = getCarouselOffers();
+  const stage = $('#carouselStage');
+  const dots = $('#carouselDots');
+  if(!stage || !dots) return;
+  if(!offers.length){
+    stage.innerHTML = '';
+    dots.innerHTML = '';
+    showCarouselIfIdle();
+    return;
+  }
+  if(carouselIndex >= offers.length) carouselIndex = 0;
+  stage.innerHTML = offers.map((o,i)=>`
+    <div class="carousel-slide ${i===carouselIndex?'active':''}" data-i="${i}">
+      <div class="carousel-badge">${i+1}</div>
+      <div class="carousel-text">
+        <div class="carousel-kicker">عرض ${i+1} من ${offers.length}</div>
+        <div class="carousel-title">${o}</div>
+      </div>
+    </div>`).join('');
+  dots.innerHTML = offers.map((_,i)=>`<button class="carousel-dot ${i===carouselIndex?'active':''}" data-i="${i}" type="button" aria-label="عرض ${i+1}"></button>`).join('');
+  $$('#carouselDots .carousel-dot').forEach(d=> d.onclick = ()=>{
+    carouselIndex = +d.dataset.i;
+    updateCarouselSlide();
+    startCarousel();
+  });
+  showCarouselIfIdle();
+}
+function renderOffersList(){
+  $('#offersList').innerHTML = appState.offers.map((o,i)=>`<div class="list-item"><span>📣 ${i+1}. ${o}</span><button data-i="${i}" title="حذف">✕</button></div>`).join('') || '<p class="hint">لا توجد عروض بعد</p>';
+  $$('#offersList button').forEach(b=> b.onclick = ()=>{ appState.offers.splice(+b.dataset.i,1); saveLocalData(); renderMarquee(); renderOffersList(); });
+}
+
+/* ============================================================
+   البحث وعرض النتيجة أسفل خانة الكود
+   ============================================================ */
+function findProduct(q){
+  q = normDigits(q).trim(); if(!q) return null;
+  let p = appState.products.find(x=>String(x.itemCode)===q);
+  if(!p) p = appState.products.find(x=>String(x.merchantCode)===q);
+  if(!p) p = appState.products.find(x=>x.name===q);
+  if(!p){ const t = appState.products.filter(x=>String(x.name).includes(q)||String(x.itemCode).includes(q)); if(t.length) p=t[0]; }
+  return p||null;
+}
+
+/* QR زخرفي مشتق من الكود لعرضه بجوار بيانات الصنف */
+function codeBars(code){
+  const value = String(code || '');
+  const n = 13, cell = 6;
+  let seed = 0;
+  for(const ch of value) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+  const finder = (x,y)=>`<rect x="${x}" y="${y}" width="30" height="30" rx="3" fill="#0b342a"/><rect x="${x+6}" y="${y+6}" width="18" height="18" rx="2" fill="#fff"/><rect x="${x+12}" y="${y+12}" width="6" height="6" fill="#0b342a"/>`;
+  let cells = finder(0,0) + finder(48,0) + finder(0,48);
+  for(let y=0;y<n;y++){
+    for(let x=0;x<n;x++){
+      const inFinder = (x<5&&y<5) || (x>7&&y<5) || (x<5&&y>7);
+      if(inFinder) continue;
+      seed = (seed * 1664525 + 1013904223) >>> 0;
+      if((seed + x*y + x + y) % 3 !== 0) cells += `<rect x="${x*cell}" y="${y*cell}" width="${cell}" height="${cell}" fill="#0b342a"/>`;
+    }
+  }
+  return `<div class="qr-wrap"><svg class="qr-code" viewBox="0 0 78 78" aria-label="QR"><rect width="78" height="78" fill="#fff"/>${cells}</svg></div>`;
+}
+
+function searchProduct(raw){
+  const q = String(raw||'').trim(); if(!q) return;
+  const p = findProduct(q);
+  clearTimeout(timerId);
+  clearInterval(countdownId);
+  const area = $('#resultArea'), card = $('#resultCard');
+  area.classList.remove('hidden');
+  $('#idleState').classList.add('hidden');
+  showCarouselIfIdle();
+  card.style.animation='none'; void card.offsetWidth; card.style.animation='';
+
+  if(!p){
+    beepErr();
+    card.innerHTML = `
+      <div class="receipt not-found">
+        <div class="text-center py-6">
+          <div class="mega" style="font-size:5rem;line-height:1;color:var(--danger)">✕</div>
+          <h2 class="mega text-center mt-2" style="font-size:2.6rem;color:var(--danger)">الصنف غير موجود</h2>
+          <p class="mt-2 font-bold" style="color:var(--ink-soft)">الكود: <span class="price-font" dir="ltr">${q}</span></p>
+          <p class="text-sm mt-1 font-bold" style="color:#b08a86">راجع الكود أو حدّث ملف الأصناف من لوحة التحكم</p>
+        </div>
+        <div class="timer-track"><div id="timerBarFill"></div></div>
+        <p class="timer-hint">يتم إخفاء الرسالة تلقائيًا</p>
+      </div>`;
+    startTimer(); return;
+  }
+
+  beepOK();
+  /* حساب التسعير: سعر البيع + خصم المجموعة */
+  const gPct = appState.groupDiscounts[p.group]||0;
+  let final = toNum(p.price);
+  if(gPct>0) final = calculateDiscountedPrice(final*(1-gPct/100));
+  const orig = toNum(p.originalPrice);
+  const hasDisc = orig>final;
+  const save = hasDisc ? orig-final : 0;
+  const totalOff = hasDisc ? Math.round((orig-final)/orig*100) : 0;
+
+  card.innerHTML = `
+    <div class="receipt ${hasDisc?'has-stamp':''}">
+      ${hasDisc?`<div class="stamp">خصم ${fmt(totalOff)}%</div>`:''}
+      <p class="text-xs font-black tracking-widest" style="color:var(--primary-dark)">✦ ${p.group||'عام'} ✦</p>
+      <h2 class="display font-extrabold mt-0" style="font-size:clamp(1.4rem,5vw,2.2rem);line-height:1.22">${p.name}</h2>
+      <div class="flex gap-2 mt-2 flex-wrap">
+        <span class="tag-pill code">كود الصنف: <span class="price-font" dir="ltr">${p.itemCode}</span></span>
+        <span class="tag-pill merchant">كود التاجر: <span class="price-font" dir="ltr">${p.merchantCode||'—'}</span></span>
+        <span class="tag-pill unit">الوحدة: ${p.unit}</span>
+        ${gPct>0?`<span class="tag-pill offer">عرض ${p.group} −${fmt(gPct)}%</span>`:''}
+      </div>
+      <hr class="dash">
+      <div class="flex items-center justify-between gap-5 flex-wrap">
+        <div style="min-width:230px">
+          <p class="text-sm font-black" style="color:var(--ink-soft)">${hasDisc?'السعر بعد الخصم':'السعر'}</p>
+          <div class="price-big"><span id="priceNum">0</span><small>EGP</small></div>
+          ${hasDisc?`<p class="old-price mt-2">قبل الخصم: ${fmt(orig)} EGP</p>`:''}
+        </div>
+        ${hasDisc?`
+        <div class="breakdown">
+          <div class="b-row"><span>السعر قبل الخصم</span><b>${fmt(orig)} EGP</b></div>
+          <div class="b-row"><span>السعر بعد الخصم</span><b style="color:var(--primary-dark)">${fmt(final)} EGP</b></div>
+          <div class="b-row save"><span>وفّرت</span><b>${fmt(save)} EGP</b></div>
+          <div class="b-row"><span>نسبة الخصم</span><b style="color:var(--danger)">${fmt(totalOff)}%</b></div>
+        </div>`:`<p class="text-sm font-extrabold px-2 py-3 rounded-xl" style="color:var(--ink-soft);background:var(--surface-2)">سعر ثابت — بدون خصم</p>`}
+      </div>
+      <div class="timer-track"><div id="timerBarFill"></div></div>
+      <p class="timer-hint">تختفي النتيجة خلال <b class="price-font" id="countDown">${appState.settings.priceDuration}</b> ثوانٍ، ويمكنك كتابة كود جديد فورًا</p>
+    </div>`;
+
+  /* عدّاد رقمي تصاعدي للسعر */
+  const el = $('#priceNum'), t0 = performance.now(), DUR=450;
+  (function tick(now){
+    const k = Math.min((now-t0)/DUR,1), e = 1-Math.pow(1-k,3);
+    el.textContent = fmt(Math.round(final*e));
+    if(k<1) requestAnimationFrame(tick); else el.textContent = fmt(final);
+  })(t0);
+
+  startTimer();
+}
+
+/* المؤقت: شريط أزرق يتناقص ثم إخفاء النتيجة بدون منع كتابة كود جديد */
+function startTimer(){
+  clearTimeout(timerId);
+  clearInterval(countdownId);
+  const dur = appState.settings.priceDuration*1000;
+  const bar = $('#timerBarFill');
+  if(bar){
+    bar.style.transition='none'; bar.style.width='100%'; void bar.offsetWidth;
+    bar.style.transition=`width ${dur}ms linear`; bar.style.width='0%';
+  }
+  const cd = $('#countDown'); let sec = appState.settings.priceDuration;
+  countdownId = setInterval(()=>{ sec--; if(cd&&sec>=0) cd.textContent=sec; if(sec<=0) clearInterval(countdownId); },1000);
+  timerId = setTimeout(resetSearchScreen, dur);
+  setTimeout(()=>{
+    const inp = $('#searchInput');
+    inp.value = '';
+    $('#clearBtn').classList.remove('show');
+    showCarouselIfIdle();
+    inp.focus();
+  }, 80);
+}
+function resetSearchScreen(){
+  clearTimeout(timerId);
+  clearInterval(countdownId);
+  $('#resultArea').classList.add('hidden');
+  $('#resultCard').innerHTML='';
+  $('#idleState').classList.remove('hidden');
+  const inp = $('#searchInput'); inp.value=''; $('#clearBtn').classList.remove('show'); showCarouselIfIdle(); inp.focus();
+}
+
+/* ============================================================
+   الكاميرا (html5-qrcode)
+   ============================================================ */
+function openCamera(){
+  $('#cameraModal').classList.add('show');
+  try{
+    scanner = scanner || new Html5Qrcode('qr-reader');
+    const formats = [Html5QrcodeSupportedFormats.EAN_13,Html5QrcodeSupportedFormats.EAN_8,Html5QrcodeSupportedFormats.CODE_128,Html5QrcodeSupportedFormats.CODE_39,Html5QrcodeSupportedFormats.QR_CODE];
+    scanner.start({facingMode:'environment'},{fps:10,qrbox:{width:260,height:150},formatsToSupport:formats},
+      text=>{ closeCamera(); $('#searchInput').value=text; searchProduct(text); },
+      ()=>{}
+    ).catch(err=>{ toast('⚠️ تعذّر تشغيل الكاميرا — تأكد من HTTPS ومن منح الإذن','error'); });
+  }catch(e){ toast('⚠️ متصفحك لا يدعم قراءة QR','error'); }
+}
+function closeCamera(){
+  $('#cameraModal').classList.remove('show');
+  if(scanner && scanner.isScanning) scanner.stop().catch(()=>{});
+}
+
+/* ============================================================
+   ملف Excel (SheetJS)
+   ============================================================ */
+async function handleExcel(file){
+  try{
+    const buf = await file.arrayBuffer();
+    const wb = XLSX.read(buf,{type:'array'});
+    const rows = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''});
+    let start = 0;
+    if(rows[0] && /item|code|كود|اسم|name/i.test(String(rows[0][0])+String(rows[0][2]))) start = 1;
+    const list = [];
+    for(let i=start;i<rows.length;i++){
+      const r = rows[i], code = normDigits(String(r[0]||'')).trim();
+      if(!code || code==='0') continue;
+      list.push({
+        itemCode: code,
+        merchantCode: normDigits(String(r[1]||'')).trim(),
+        name: String(r[2]||'').trim() || 'صنف بدون اسم',
+        unit: String(r[3]||'قطعة').trim() || 'قطعة',
+        price: toNum(r[4]),
+        originalPrice: toNum(r[5]),
+        group: String(r[6]||'عام').trim() || 'عام'
+      });
+    }
+    if(!list.length) throw new Error('empty');
+    appState.products = list;
+    appState.meta = { updatedAt:new Date().toISOString(), source:'excel' };
+    saveLocalData(); refreshUI();
+    beepOK();
+    toast(`✅ تم استيراد <b class="display">${fmt(list.length)}</b> صنفًا بنجاح من الملف`);
+  }catch(e){ toast('❌ تعذّر قراءة الملف — تأكد من صيغة Excel والأعمدة المطلوبة','error'); beepErr(); }
+}
+function downloadTemplate(){
+  const ws = XLSX.utils.aoa_to_sheet([
+    ['ItemCode','MerchantCode','Name','Unit','Selling Price','Original Price','Group'],
+    ['62210001','M-101','أرز أبيض فاخر 5 كجم','كيس',185,210,'بقالة'],
+    ['62210008','M-108','حذاء رياضي خفيف','زوج',480,550,'أحذية']
+  ]);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb,ws,'Products');
+  XLSX.writeFile(wb,'قالب_الاصناف.xlsx');
+  toast('⬇️ تم تنزيل قالب Excel');
+}
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(buildPayload(),null,2)],{type:'application/json'});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download='data.json'; a.click();
+  toast('⬇️ تم تنزيل data.json');
+}
+
+/* ============================================================
+   GitHub: الجلب والنشر
+   ============================================================ */
+function ghCfg(){ return appState.settings.github; }
+function ghRawUrl(){ const g=ghCfg(); return `https://raw.githubusercontent.com/${g.user}/${g.repo}/${g.branch||'main'}/data.json`; }
+function ghApiUrl(){ const g=ghCfg(); return `https://api.github.com/repos/${g.user}/${g.repo}/contents/data.json`; }
+function buildPayload(){
+  return { version:1, updatedAt:new Date().toISOString(),
+    products:appState.products, offers:appState.offers, groupDiscounts:appState.groupDiscounts };
+}
+const b64enc = s => btoa(unescape(encodeURIComponent(s)));
+
+async function fetchFromGithub(silent=false){
+  const g = appState.settings.github;
+  if(!g.user || !g.repo) return false;
+  try{
+    const res = await fetch(ghRawUrl()+'?t='+Date.now(),{cache:'no-store'});
+    if(!res.ok) throw new Error(res.status);
+    const j = await res.json();
+    if(Array.isArray(j.products)){
+      appState.products = j.products;
+      
+      // ⚡ التعديل هنا: قراءة قائمة العروض مع الأصناف
+      if(j.offers) appState.offers = j.offers;
+      
+      saveLocalData();
+      refreshUI();
+      if(!silent) toast('🔄 تم جلب البيانات والعروض من GitHub');
+      return true;
+    }
+  }catch(e){
+    // ⚡ التعديل هنا: تنبيه يعمل بالبيانات المحلية في حال انقطاع الإنترنت
+    if(!silent) toast('❌ تعذّر الجلب من GitHub — يعمل بالبيانات المحلية','error');
+  }
+  return false;
+}
+async function testGithub(){
+  const g = ghCfg();
+  if(!g.user||!g.repo){ toast('اكتب اسم المستخدم والمستودع أولًا','warn'); return; }
+  try{
+    const res = await fetch(`https://api.github.com/repos/${g.user}/${g.repo}`,{headers:{Authorization:`token ${g.token}`,Accept:'application/vnd.github+json'}});
+    if(res.ok){ const j=await res.json(); toast(`🔌 اتصال ناجح — المستودع: <b dir="ltr">${j.full_name}</b>`); beepOK(); }
+    else if(res.status===401) toast('❌ التوكن غير صالح أو منتهي','error');
+    else if(res.status===404) toast('❌ المستودع غير موجود أو خاص — أضف توكن بصلاحيات repo','error');
+    else toast('❌ خطأ '+res.status,'error');
+  }catch(e){ toast('❌ تعذّر الاتصال بالشبكة','error'); }
+}
+async function publishGithub(){
+  const g = ghCfg();
+  if(!g.user||!g.repo||!g.token){ toast('أكمل بيانات GitHub (User / Repo / Token) أولًا','warn'); return; }
+  $('#ghStatus').textContent = 'جاري النشر…';
+  try{
+    /* 1) قراءة sha إن كان الملف موجودًا */
+    let sha = null;
+    const chk = await fetch(ghApiUrl(),{headers:{Authorization:`token ${g.token}`,Accept:'application/vnd.github+json'}});
+    if(chk.ok) sha = (await chk.json()).sha;
+    else if(chk.status!==404){ toast('❌ فشل التحقق من الملف ('+chk.status+')','error'); $('#ghStatus').textContent='فشل النشر'; return; }
+
+    /* 2) رفع data.json مشفّرًا Base64 */
+    const put = await fetch(ghApiUrl(),{
+      method:'PUT',
+      headers:{Authorization:`token ${g.token}`,Accept:'application/vnd.github+json','Content-Type':'application/json'},
+      body: JSON.stringify({
+        message:'تحديث بيانات الأسعار — '+new Date().toLocaleString('ar-EG'),
+        content: b64enc(JSON.stringify(buildPayload())),
+        branch: g.branch||'main',
+        ...(sha?{sha}:{})
+      })
+    });
+    if(put.ok){
+      appState.meta = { updatedAt:new Date().toISOString(), source:'github' };
+      saveLocalData(); refreshUI();
+      beepOK();
+      $('#ghStatus').textContent = 'آخر مزامنة: '+new Date().toLocaleTimeString('ar-EG')+' ✓';
+      toast('🚀 تم نشر البيانات إلى GitHub — ستتزامن مع كل الأجهزة');
+    }else{
+      const e = await put.json().catch(()=>({}));
+      toast('❌ فشل النشر: '+(e.message||put.status),'error');
+      $('#ghStatus').textContent='فشل النشر';
+    }
+  }catch(e){ toast('❌ خطأ في الشبكة أثناء النشر','error'); $('#ghStatus').textContent='فشل النشر'; }
+}
+
+/* ============================================================
+   لوحة التحكم: الدخول والتبويبات
+   ============================================================ */
+function openAdmin(){
+  if(!adminAuthed){ $('#loginModal').classList.add('show'); setTimeout(()=>$('#loginPass').focus(),100); return; }
+  $('#adminPanel').classList.add('open'); $('#drawerOverlay').classList.add('show');
+}
+function closeAdmin(){ $('#adminPanel').classList.remove('open'); $('#drawerOverlay').classList.remove('show'); }
+function tryLogin(){
+  if($('#loginPass').value === appState.settings.password){
+    adminAuthed = true; $('#loginModal').classList.remove('show'); $('#loginPass').value='';
+    openAdmin(); beepOK(); toast('🔓 مرحبًا بك في لوحة التحكم');
+  }else{
+    beepErr();
+    const box=$('#loginBox'); box.classList.remove('shake'); void box.offsetWidth; box.classList.add('shake');
+    $('#loginPass').value=''; $('#loginPass').focus();
+    toast('❌ كلمة المرور غير صحيحة','error');
+  }
+}
+
+/* ============================================================
+   تحديث الواجهة
+   ============================================================ */
+function refreshUI(){
+  $('#prodCount').textContent = fmt(appState.products.length);
+  $$('.dur-label').forEach(el=> el.textContent = appState.settings.priceDuration);
+
+  /* جدول الأصناف */
+  $('#prodTable').innerHTML = appState.products.slice(0,200).map(p=>
+    `<tr><td dir="ltr" style="text-align:right">${p.itemCode}</td><td>${p.name}</td><td class="price-font">${fmt(p.price)}</td><td>${p.group}</td></tr>`).join('')
+    || '<tr><td colspan="4" class="text-center py-4">لا توجد أصناف</td></tr>';
+
+  /* المجموعات في قائمة الخصومات */
+  const groups = [...new Set(appState.products.map(p=>p.group))];
+  $('#groupsList').innerHTML = groups.map(g=>`<option value="${g}">`).join('');
+
+  /* خصومات المجموعات */
+  $('#discList').innerHTML = Object.entries(appState.groupDiscounts).map(([g,pct])=>
+    `<div class="list-item"><span>🏷️ ${g} — خصم <b class="display">${fmt(pct)}%</b></span><button data-g="${g}">✕</button></div>`).join('')
+    || '<p class="hint">لا توجد خصومات مجموعات</p>';
+  $$('#discList button').forEach(b=> b.onclick=()=>{ delete appState.groupDiscounts[b.dataset.g]; saveLocalData(); refreshUI(); });
+
+  renderMarquee(); renderOffersList();
+}
+
+/* ============================================================
+   التهيئة عند فتح الصفحة
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', async ()=>{
+  loadSettings();
+  loadLocalData();
+  $('#ghUser').value = appState.settings.github.user;
+  $('#ghRepo').value = appState.settings.github.repo;
+  $('#ghBranch').value = appState.settings.github.branch;
+  $('#ghToken').value = appState.settings.github.token;
+  $('#priceDurationNum').value = appState.settings.priceDuration;
+  
+  // ⚡ التعديل: جلب البيانات والعروض تلقائياً من GitHub عند فتح الصفحة
+  await fetchFromGithub(true);
+  
+  refreshUI();
+  setTimeout(()=> $('#loadingScreen').classList.add('hide'), 400);
+  $('#searchInput').focus();
+});
+/* ============================================================
+   ربط الأحداث
+   ============================================================ */
+/* البحث */
+const searchInput = $('#searchInput');
+searchInput.addEventListener('keydown', e=>{ if(e.key==='Enter') searchProduct(searchInput.value); });
+let liveT; const inputTimes = [];
+searchInput.addEventListener('input', ()=>{
+  clearTimeout(timerId);
+  clearInterval(countdownId);
+  const q = searchInput.value.trim();
+  $('#clearBtn').classList.toggle('show', !!q);
+  showCarouselIfIdle();
+  if(q){
+    $('#resultArea').classList.add('hidden');
+    $('#idleState').classList.remove('hidden');
+  }
+  clearTimeout(liveT);
+  if(!q) return;
+  /* تمييز الماسح عن الكتابة اليدوية:
+     الماسح يرسل الكود كله دفعة واحدة (4 أحرف أو أكثر خلال 300ms) → بحث شبه فوري
+     الكتابة اليدوية → مهلة أطول حتى يكتمل الكود — بدون الحاجة إلى Enter */
+  const now = Date.now();
+  inputTimes.push(now);
+  while(inputTimes.length && now - inputTimes[0] > 300) inputTimes.shift();
+  const burst = inputTimes.length >= 4;
+  liveT = setTimeout(()=>searchProduct(q), burst ? 120 : 850);
+});
+$('#clearBtn').onclick = ()=> resetSearchScreen();
+$('#cameraBtn').onclick = openCamera;
+$('#closeCamera').onclick = closeCamera;
+$('#cameraModal').addEventListener('click', e=>{ if(e.target.id==='cameraModal') closeCamera(); });
+
+/* لوحة التحكم */
+$('#adminBtn').onclick = openAdmin;
+$('#closeAdmin').onclick = closeAdmin;
+$('#drawerOverlay').onclick = closeAdmin;
+$('#lockBtn').onclick = ()=>{ adminAuthed=false; closeAdmin(); toast('🔒 تم قفل لوحة التحكم','warn'); };
+$('#loginSubmit').onclick = tryLogin;
+$('#loginPass').addEventListener('keydown', e=>{ if(e.key==='Enter') tryLogin(); });
+$('#loginCancel').onclick = ()=> $('#loginModal').classList.remove('show');
+$('#savePass').onclick = ()=>{
+  const v = $('#newPass').value.trim();
+  if(v.length<4){ toast('كلمة المرور 4 أحرف على الأقل','warn'); return; }
+  appState.settings.password = v; saveSettings(); $('#newPass').value=''; toast('🔑 تم تغيير كلمة المرور');
+};
+
+/* التبويبات */
+$$('.tab-btn').forEach(b=> b.onclick=()=>{
+  $$('.tab-btn').forEach(x=>x.classList.remove('active'));
+  $$('.tab-section').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.tab).classList.add('active');
+});
+
+/* Excel */
+$('#dropZone').onclick = ()=> $('#excelFile').click();
+$('#excelFile').onchange = e=>{ if(e.target.files[0]) handleExcel(e.target.files[0]); e.target.value=''; };
+['dragover','dragenter'].forEach(ev=> $('#dropZone').addEventListener(ev, e=>{ e.preventDefault(); $('#dropZone').classList.add('drag'); }));
+['dragleave','drop'].forEach(ev=> $('#dropZone').addEventListener(ev, e=>{ e.preventDefault(); $('#dropZone').classList.remove('drag'); }));
+$('#dropZone').addEventListener('drop', e=>{ const f=e.dataTransfer.files[0]; if(f) handleExcel(f); });
+$('#templateBtn').onclick = downloadTemplate;
+$('#exportBtn').onclick = exportJSON;
+$('#clearProducts').onclick = ()=>{
+  if(!confirm('هل تريد مسح جميع الأصناف؟')) return;
+  appState.products=[]; appState.meta={updatedAt:new Date().toISOString(),source:'local'};
+  saveLocalData(); refreshUI(); toast('🗑️ تم مسح جميع الأصناف','warn');
+};
+
+/* المظهر */
+$('#logoFile').onchange = e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader(); r.onload=()=>{ appState.settings.logo=r.result; applyTheme(); saveSettings(); toast('🖼️ تم تحديث الشعار — يظهر الآن بوضوح أعلى الصفحة'); }; r.readAsDataURL(f);
+};
+$('#removeLogo').onclick = ()=>{ appState.settings.logo=''; applyTheme(); saveSettings(); };
+$('#logoSize').oninput = e=>{
+  const v = Math.min(160, Math.max(40, +e.target.value||84));
+  appState.settings.logoSize = v;
+  $('#logoSizeVal').textContent = v;
+  applyTheme(); saveSettings();
+};
+$('#bgColorApply').onclick = ()=>{ appState.settings.background={type:'color',value:$('#bgColor').value}; applyBackground(); saveSettings(); renderBgSwatches(); };
+$('#bgImage').onchange = e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader(); r.onload=()=>{ appState.settings.background={type:'image',value:r.result}; applyBackground(); saveSettings(); renderBgSwatches(); toast('🎨 تم تغيير الخلفية'); }; r.readAsDataURL(f);
+};
+$('#primaryColor').oninput = e=>{ appState.settings.primary=e.target.value; applyTheme(); saveSettings(); };
+$('#accentColor').oninput = e=>{ appState.settings.accent=e.target.value; applyTheme(); saveSettings(); };
+$('#resetColors').onclick = ()=>{ appState.settings.primary='#0aa06b'; appState.settings.accent='#ffc800'; applyTheme(); saveSettings(); $('#primaryColor').value='#0aa06b'; $('#accentColor').value='#ffc800'; };
+
+/* العروض */
+$('#marqueeOn').onchange = e=>{ appState.settings.marqueeEnabled=e.target.checked; saveSettings(); renderMarquee(); };
+$('#marqueeSpeed').oninput = e=>{ appState.settings.marqueeSpeed=+e.target.value; $('#speedVal').textContent=e.target.value; saveSettings(); renderMarquee(); };
+$('#addOffer').onclick = ()=>{
+  const v=$('#offerInput').value.trim(); if(!v) return;
+  appState.offers.push(v); $('#offerInput').value='';
+  saveLocalData(); renderMarquee(); renderOffersList(); toast('📣 تمت إضافة العرض');
+};
+$('#offerInput').addEventListener('keydown', e=>{ if(e.key==='Enter') $('#addOffer').click(); });
+
+/* خصومات المجموعات */
+$('#addDisc').onclick = ()=>{
+  const g=$('#discGroup').value.trim(), pct=+$('#discPct').value;
+  if(!g || !(pct>0)){ toast('اكتب اسم المجموعة ونسبة الخصم','warn'); return; }
+  appState.groupDiscounts[g]=pct; $('#discGroup').value=''; $('#discPct').value='';
+  saveLocalData(); refreshUI();
+  toast(`🏷️ خصم ${fmt(pct)}% على مجموعة «${g}» — مع التقريب لأقرب 5 جنيهات`);
+};
+
+/* الإعدادات — مدة ظهور السعر (شريط منزلق + رقم) */
+function setDuration(v){
+  v = Math.min(30, Math.max(3, parseInt(v)||8));
+  appState.settings.priceDuration = v;
+  $('#priceDuration').value = v; $('#priceDurationNum').value = v;
+  refreshUI(); saveSettings();
+}
+$('#priceDuration').oninput = e=> setDuration(e.target.value);
+$('#priceDurationNum').oninput = e=> setDuration(e.target.value);
+$('#soundOn').onchange = e=>{ appState.settings.sound=e.target.checked; saveSettings(); };
+
+/* GitHub */
+['ghUser','ghRepo','ghBranch','ghToken'].forEach(id=> $('#'+id).addEventListener('input', e=>{
+  appState.settings.github[id.replace('gh','').toLowerCase()] = e.target.value.trim(); saveSettings();
+}));
+$('#ghTest').onclick = testGithub;
+$('#ghPull').onclick = ()=> fetchFromGithub(false);
+// ⚡ كود جديد: دالة نشر التغييرات والعروض إلى GitHub API
+async function publishGithub(){
+  const g = appState.settings.github;
+  if(!g.user || !g.repo || !g.token){ 
+    toast('أكمل بيانات GitHub أولاً (اسم المستخدم، المستودع، التوكن)','warn'); 
+    return; 
+  }
+  $('#ghStatus').textContent = 'جاري النشر...';
+  try{
+    let sha = null;
+    const chk = await fetch(ghApiUrl(), { headers: { Authorization: `token ${g.token}` } });
+    if(chk.ok) sha = (await chk.json()).sha;
+
+    // دمج الأصناف والعروض وتشفيرها بصيغة Base64
+    const payload = { products: appState.products, offers: appState.offers };
+    const contentB64 = btoa(unescape(encodeURIComponent(JSON.stringify(payload, null, 2))));
+
+    const put = await fetch(ghApiUrl(), {
+      method: 'PUT',
+      headers: { Authorization: `token ${g.token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: 'تحديث بيانات الأصناف والعروض',
+        content: contentB64,
+        branch: g.branch || 'main',
+        ...(sha ? { sha } : {})
+      })
+    });
+
+    if(put.ok){
+      $('#ghStatus').textContent = 'تم النشر بنجاح: ' + new Date().toLocaleTimeString('ar-EG');
+      toast('🚀 تم نشر الأصناف والعروض إلى GitHub');
+    } else {
+      toast('❌ فشل النشر — تحقق من التوكن وصلاحياته','error');
+    }
+  } catch(e){
+    toast('❌ خطأ في الاتصال بالشبكة','error');
+  }
+}
+
+// ربط زر النشر بالدالة
+$('#ghPublish').onclick = publishGithub;
+$('#ghPublish').onclick = publishGithub;
+
+/* اختصارات لوحة المفاتيح */
+window.addEventListener('keydown', e=>{
+  const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
+  if(e.key==='/' && !typing){ e.preventDefault(); searchInput.focus(); }
+  if(e.key==='Escape'){
+    if(!$('#resultArea').classList.contains('hidden')) resetSearchScreen();
+    closeCamera(); closeAdmin(); $('#loginModal').classList.remove('show');
+  }
+});
+</script>
+</body>
+</html>
