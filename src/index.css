@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cairo: "Cairo", system-ui, sans-serif;
+  --font-changa: "Changa", system-ui, sans-serif;
+
+  --color-brand-50: #ecfdf3;
+  --color-brand-100: #d1fadf;
+  --color-brand-500: #16a34a;
+  --color-brand-600: #15803d;
+  --color-brand-700: #166534;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+
+  --animate-scanline: scanline 2.2s ease-in-out infinite;
+  --animate-floaty: floaty 3.5s ease-in-out infinite;
+  --animate-stamp: stamp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-popin: popin 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-slidedown: slidedown 0.4s ease both;
+  --animate-shake: shake 0.5s ease;
+  --animate-spin-slow: spin 1.1s linear infinite;
+  --animate-marquee: marquee 18s linear infinite;
+}
+
+@keyframes scanline {
+  0%,
+  100% {
+    transform: translateY(-10px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(150px);
+    opacity: 1;
+  }
+}
+
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translateY(-8px) rotate(var(--rot, 0deg));
+  }
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(2.4) rotate(-18deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.92) rotate(-9deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-8deg);
+    opacity: 1;
+  }
+}
+
+@keyframes popin {
+  0% {
+    transform: scale(0.7) translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-14px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-9px);
+  }
+  40%,
+  80% {
+    transform: translateX(9px);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes barload {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-cairo);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* ===== ظلال ورقية صلبة (Sticker / receipt look) ===== */
+.paper {
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.92);
+}
+.paper-sm {
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.9);
+}
+.paper-brand {
+  box-shadow: 5px 5px 0 0 var(--brand-ink, #0f3d23);
+}
+.paper-gold {
+  box-shadow: 5px 5px 0 0 #92400e;
+}
+
+/* ورق به أخدود ممزق من الأسفل */
+.receipt-edge {
+  --c: var(--brand-ink, #15803d);
+  -webkit-mask: radial-gradient(11px at 50% calc(100% - 0px), #0000 98%, #000) 50%
+      calc(100% - 11px) / 22px 22px repeat-x;
+  mask: radial-gradient(11px at 50% calc(100% - 0px), #0000 98%, #000) 50%
+      calc(100% - 11px) / 22px 22px repeat-x;
+}
+
+/* ===== خلفية منقّطة على طراز المحلات ===== */
+.dots-bg {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.4px, transparent 1.4px);
+  background-size: 18px 18px;
+}
+
+/* خط المسح الأخضر داخل عدسة الماسح */
+.scanbeam {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(22, 163, 74, 0.15),
+    rgba(22, 163, 74, 0.85)
+  );
+}
+
+/* إخفاء شريط التمرير في القوائم الأفقية */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* زوايا الماسح */
+.corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-color: var(--brand-ink, #15803d);
+}
+
+/* تأثير ضغط الزر */
+.btn-press {
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease;
+}
+.btn-press:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.9) !important;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
