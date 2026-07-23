@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-23T08:13:22.626Z",
+  "products": [
+    {
+      "itemCode": "62210001",
+      "merchantCode": "M-101",
+      "name": "أرز أبيض فاخر 5 كجم",
+      "unit": "كيس",
+      "price": 185,
+      "originalPrice": 210,
+      "group": "بقالة"
+    },
+    {
+      "itemCode": "62210002",
+      "merchantCode": "M-102",
+      "name": "زيت عباد الشمس 1 لتر",
+      "unit": "زجاجة",
+      "price": 65,
+      "originalPrice": 75,
+      "group": "بقالة"
+    },
+    {
+      "itemCode": "62210003",
+      "merchantCode": "M-103",
+      "name": "سكر ناعم 1 كجم",
+      "unit": "كيس",
+      "price": 35,
+      "originalPrice": 38,
+      "group": "بقالة"
+    },
+    {
+      "itemCode": "62210004",
+      "merchantCode": "M-104",
+      "name": "شاي فتلة 250 جم",
+      "unit": "علبة",
+      "price": 52,
+      "originalPrice": 52,
+      "group": "مشروبات"
+    },
+    {
+      "itemCode": "62210005",
+      "merchantCode": "M-105",
+      "name": "عصير مانجو 1 لتر",
+      "unit": "عبوة",
+      "price": 40,
+      "originalPrice": 48,
+      "group": "مشروبات"
+    },
+    {
+      "itemCode": "62210006",
+      "merchantCode": "M-106",
+      "name": "شامبو بالأعشاب 400مل",
+      "unit": "عبوة",
+      "price": 99,
+      "originalPrice": 120,
+      "group": "عناية"
+    },
+    {
+      "itemCode": "62210007",
+      "merchantCode": "M-107",
+      "name": "صابون سائل 500مل",
+      "unit": "عبوة",
+      "price": 30,
+      "originalPrice": 30,
+      "group": "عناية"
+    },
+    {
+      "itemCode": "62210008",
+      "merchantCode": "M-108",
+      "name": "حذاء رياضي خفيف",
+      "unit": "زوج",
+      "price": 480,
+      "originalPrice": 550,
+      "group": "أحذية"
+    },
+    {
+      "itemCode": "62210009",
+      "merchantCode": "M-109",
+      "name": "شبشب منزلي",
+      "unit": "زوج",
+      "price": 75,
+      "originalPrice": 90,
+      "group": "أحذية"
+    },
+    {
+      "itemCode": "62210010",
+      "merchantCode": "M-110",
+      "name": "مكرونة 400 جم",
+      "unit": "كيس",
+      "price": 14,
+      "originalPrice": 15,
+      "group": "بقالة"
+    }
+  ],
+  "offers": [
+    "خصم 30% على جميع الأحذية",
+    "اشتري قطعة واحصل على الثانية بنصف السعر",
+    "عروض البقالة كل يوم جمعة",
+    "التوصيل مجاني للطلبات فوق 500 جنيه"
+  ],
+  "groupDiscounts": {
+    "أحذية": 30,
+    "عناية": 10
+  }
+}
