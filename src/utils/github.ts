@@ -40,7 +40,11 @@ export async function pushToGitHub(
     /* ملف جديد */
   }
 
-  const content = encodeBase64(JSON.stringify(data, null, 2));
+  // لا نرفع إعدادات GitHub (خصوصًا الـ Token) ضمن محتوى الملف
+  // لأن GitHub يرفض أي رفع يحتوي على سر (Secret) داخل المحتوى.
+  const content = encodeBase64(
+    JSON.stringify({ ...data, github: undefined }, null, 2),
+  );
   const res = await fetch(url, {
     method: "PUT",
     headers: {
