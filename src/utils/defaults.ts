@@ -6,6 +6,7 @@ import type {
   Settings,
   StoreData,
   Theme,
+  User,
 } from "../types";
 
 export const DEFAULT_THEME: Theme = {
@@ -31,6 +32,18 @@ export const DEFAULT_GITHUB: GitHubConfig = {
   branch: "main",
   path: "data.json",
 };
+
+// كلمة المرور الافتراضية: 1234 — يجب تغييرها من تبويب "المستخدمون" فور أول دخول
+export const DEFAULT_USERS: User[] = [
+  {
+    id: "admin",
+    username: "admin",
+    passwordHash:
+      "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+    role: "admin",
+    blocked: false,
+  },
+];
 
 export const DEFAULT_OFFERS: Offer[] = [
   {
@@ -142,4 +155,5 @@ export const DEFAULT_DATA: StoreData = {
   settings: DEFAULT_SETTINGS,
   theme: DEFAULT_THEME,
   github: DEFAULT_GITHUB,
+  users: DEFAULT_USERS,
 };

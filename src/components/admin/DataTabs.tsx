@@ -5,7 +5,7 @@ import {
   exportProductsExcel,
   parseProductsFromFile,
 } from "../../utils/excel";
-import { pullFromGitHub, pushToGitHub } from "../../utils/github";
+import { pushToGitHub } from "../../utils/github";
 import { Btn, ColorRow, Field, SectionCard, TextInput } from "./ui";
 
 function downloadJSON(filename: string, obj: unknown) {
@@ -270,8 +270,6 @@ export function GithubTab({ store }: { store: StoreApi }) {
   const [busy, setBusy] = useState(false);
   const [status, setStatus] = useState<string | null>(null);
 
-  const ready = g.owner && g.repo;
-
   return (
     <div>
       <SectionCard title="ربط GitHub للمزامنة" icon="🔄">
@@ -317,7 +315,7 @@ export function GithubTab({ store }: { store: StoreApi }) {
         </div>
       </SectionCard>
 
-      <SectionCard title="عمليات المزامنة" icon="⬆️⬇️">
+      <SectionCard title="عمليات المزامنة" icon="⬆️">
         <div className="flex flex-wrap gap-2">
           <Btn
             variant="gold"
@@ -331,23 +329,10 @@ export function GithubTab({ store }: { store: StoreApi }) {
           >
             ⬆️ رفع البيانات (Push)
           </Btn>
-          <Btn
-            disabled={busy || !ready}
-            onClick={async () => {
-              setBusy(true);
-              const r = await pullFromGitHub(g);
-              if (r.data) {
-                store.replaceAll(r.data);
-                setStatus("تم استبدال البيانات المحلية بنسخة GitHub ✅");
-              } else {
-                setStatus(r.message);
-              }
-              setBusy(false);
-            }}
-          >
-            ⬇️ تنزيل البيانات (Pull)
-          </Btn>
         </div>
+        <p className="mt-2 font-cairo text-[11px] font-semibold text-neutral-500">
+          تُنزَّل التحديثات تلقائيًا على كل الأجهزة، فلا حاجة للتنزيل يدويًا.
+        </p>
         {busy && (
           <p className="mt-2 font-cairo text-xs font-bold text-[#15803d]">
             جارٍ الاتصال بـ GitHub…

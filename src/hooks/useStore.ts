@@ -17,6 +17,7 @@ function loadData(): StoreData {
       settings: { ...DEFAULT_DATA.settings, ...parsed.settings },
       theme: { ...DEFAULT_DATA.theme, ...parsed.theme },
       github: { ...DEFAULT_DATA.github, ...parsed.github },
+      users: parsed.users ?? DEFAULT_DATA.users,
     };
   } catch {
     return DEFAULT_DATA;
@@ -66,6 +67,10 @@ export function useStore() {
     (github: StoreData["github"]) => setData((d) => ({ ...d, github })),
     [],
   );
+  const setUsers = useCallback(
+    (users: StoreData["users"]) => setData((d) => ({ ...d, users })),
+    [],
+  );
 
   /** يستبدل كل البيانات دفعة واحدة (يُستخدم في الاستيراد/Sync) */
   const replaceAll = useCallback(
@@ -77,6 +82,7 @@ export function useStore() {
         settings: { ...d.settings, ...incoming.settings },
         theme: { ...d.theme, ...incoming.theme },
         github: { ...d.github, ...incoming.github },
+        users: incoming.users ?? d.users,
       })),
     [],
   );
@@ -91,6 +97,7 @@ export function useStore() {
     setSettings,
     setTheme,
     setGithub,
+    setUsers,
     replaceAll,
     resetAll,
   };

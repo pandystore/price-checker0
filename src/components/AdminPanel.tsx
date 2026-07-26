@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { StoreApi } from "../hooks/useStore";
 import { AppearanceTab, DataTab, GithubTab } from "./admin/DataTabs";
-import { DiscountsTab, OffersTab, SettingsTab } from "./admin/EditTabs";
+import { DiscountsTab, OffersTab, SettingsTab, UsersTab } from "./admin/EditTabs";
 
 interface Props {
   open: boolean;
@@ -10,13 +10,21 @@ interface Props {
   onOpenGithubGuide?: () => void;
 }
 
-type TabId = "data" | "appearance" | "offers" | "discounts" | "settings" | "github";
+type TabId =
+  | "data"
+  | "appearance"
+  | "offers"
+  | "discounts"
+  | "users"
+  | "settings"
+  | "github";
 
 const TABS: { id: TabId; label: string; icon: string }[] = [
   { id: "data", label: "البيانات", icon: "📋" },
   { id: "appearance", label: "المظهر", icon: "🎨" },
   { id: "offers", label: "العروض", icon: "🎉" },
   { id: "discounts", label: "الخصومات", icon: "🏷️" },
+  { id: "users", label: "المستخدمون", icon: "👥" },
   { id: "settings", label: "الإعدادات", icon: "⚙️" },
   { id: "github", label: "GitHub", icon: "🔄" },
 ];
@@ -136,6 +144,7 @@ export default function AdminPanel({ open, onClose, store, onOpenGithubGuide }: 
               {tab === "appearance" && <AppearanceTab store={store} />}
               {tab === "offers" && <OffersTab store={store} />}
               {tab === "discounts" && <DiscountsTab store={store} />}
+              {tab === "users" && <UsersTab store={store} />}
               {tab === "settings" && (
                 <SettingsTab store={store} onClose={onClose} onOpenGithubGuide={onOpenGithubGuide} />
               )}

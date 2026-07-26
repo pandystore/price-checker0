@@ -1,6 +1,7 @@
 import { useState } from "react";
-import type { Discount, Offer } from "../../types";
+import type { Discount, Offer, User } from "../../types";
 import type { StoreApi } from "../../hooks/useStore";
+import { hashPassword } from "../../utils/auth";
 import { Btn, Field, SectionCard, TextInput, Toggle } from "./ui";
 
 function uid() {
@@ -181,6 +182,129 @@ export function DiscountsTab({ store }: { store: StoreApi }) {
             إضافة
           </Btn>
         </div>
+      </SectionCard>
+    </div>
+  );
+}
+
+/* ===================== تبويب المستخدمون ===================== */
+export function UsersTab({ store }: { store: StoreApi }) {
+  const { data, setUsers } = store;
+  const [uname, setUname] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [role, setRole] = useState<User["role"]>("staff");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+
+  function toggleBlock(id: string) {
+    setUsers(data.users.map((u) => (u.id === id ? { ...u, blocked: !u.blocked } : u)));
+  }
+  function remove(id: string) {
+    if (data.users.length <= 1) {
+      alert("لا يمكن حذف آخر حساب.");
+      return;
+    }
+    setUsers(data.users.filter((u) => u.id !== id));
+  }
+
+  async function add() {
+    const name = uname.trim();
+    if (!name || pwd.length < 3) {
+      setErr("اسم المستخدم مطلوب وكلمة المرور 3 أحرف على الأقل.");
+      return;
+    }
+    if (data.users.some((u) => u.username === name)) {
+      setErr("اسم المستخدم موجود بالفعل.");
+      return;
+    }
+    setBusy(true);
+    const passwordHash = await hashPassword(pwd);
+    setUsers([
+      ...data.users,
+      { id: uid(), username: name, passwordHash, role, blocked: false },
+    ]);
+    setBusy(false);
+    setUname("");
+    setPwd("");
+    setRole("staff");
+    setErr(null);
+  }
+
+  return (
+    <div>
+      <p className="mb-3 rounded-lg bg-[#fffbeb] border-2 border-[#f59e0b] p-2 font-cairo text-[11px] font-semibold text-[#7c2d12]">
+        هؤلاء هم الأشخاص المسموح لهم بفتح الصفحة الرئيسية. المستخدم بدور
+        "مدير" فقط يرى زر لوحة التحكم ⚙️. بعد أي تعديل هنا اضغط "رفع البيانات"
+        من تبويب GitHub حتى يظهر التغيير على باقي الأجهزة.
+      </p>
+
+      <SectionCard title="المستخدمون الحاليون" icon="👥">
+        <div className="space-y-2">
+          {data.users.map((u) => (
+            <div
+              key={u.id}
+              className="flex items-center gap-2 rounded-lg border-2 border-black bg-white p-2"
+            >
+              <span className="min-w-0 flex-1">
+                <span className="block truncate font-changa text-sm font-extrabold">
+                  {u.username}
+                </span>
+                <span className="block font-cairo text-[11px] text-neutral-400">
+                  {u.role === "admin" ? "مدير" : "موظف"}
+                </span>
+              </span>
+              <button
+                onClick={() => toggleBlock(u.id)}
+                className={`shrink-0 rounded-md border-2 border-black px-2 py-1.5 font-cairo text-xs font-extrabold ${
+                  u.blocked ? "bg-red-600 text-white" : "bg-[#16a34a] text-white"
+                }`}
+              >
+                {u.blocked ? "محظور 🚫" : "نشط ✓"}
+              </button>
+              <Btn variant="danger" onClick={() => remove(u.id)}>
+                🗑️
+              </Btn>
+            </div>
+          ))}
+        </div>
+      </SectionCard>
+
+      <SectionCard title="إضافة مستخدم جديد" icon="➕">
+        <Field label="اسم المستخدم">
+          <TextInput
+            value={uname}
+            onChange={(e) => {
+              setUname(e.target.value);
+              setErr(null);
+            }}
+          />
+        </Field>
+        <Field label="كلمة المرور">
+          <TextInput
+            type="text"
+            value={pwd}
+            onChange={(e) => {
+              setPwd(e.target.value);
+              setErr(null);
+            }}
+          />
+        </Field>
+        <Field label="الدور">
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value as User["role"])}
+            className="w-full rounded-lg border-2 border-black bg-white px-3 py-2 font-cairo text-sm font-bold"
+          >
+            <option value="staff">موظف (بدون لوحة تحكم)</option>
+            <option value="admin">مدير (يرى لوحة التحكم)</option>
+          </select>
+        </Field>
+        {err && (
+          <p className="mb-2 font-cairo text-xs font-bold text-red-600">{err}</p>
+        )}
+        <Btn variant="gold" onClick={add} disabled={busy}>
+          {busy ? "جارٍ الإضافة…" : "إضافة مستخدم"}
+        </Btn>
       </SectionCard>
     </div>
   );

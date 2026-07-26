@@ -3,16 +3,18 @@ import AdminPanel from "./components/AdminPanel";
 import GithubGuide from "./components/GithubGuide";
 import Header from "./components/Header";
 import LoadingScreen from "./components/LoadingScreen";
+import LoginScreen from "./components/LoginScreen";
 import OffersCarousel from "./components/OffersCarousel";
 import PriceResult from "./components/PriceResult";
 import Scanner from "./components/Scanner";
 import SearchBox from "./components/SearchBox";
 import { useStore } from "./hooks/useStore";
+import { clearSession, getSessionUsername, setSessionUsername } from "./utils/auth";
 import { shade } from "./utils/color";
 import { pullFromGitHub } from "./utils/github";
 import { computePrice, findProducts, formatEGP } from "./utils/pricing";
 import { playError, playFound } from "./utils/sound";
-import type { Product } from "./types";
+import type { Product, User } from "./types";
 
 interface ResultState {
   product: Product;
@@ -40,6 +42,8 @@ export default function App() {
   const [showScanner, setShowScanner] = useState(false);
   const [adminOpen, setAdminOpen] = useState(false);
   const [showGithubGuide, setShowGithubGuide] = useState(false);
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [authChecked, setAuthChecked] = useState(false);
 
   const hideTimer = useRef<number | null>(null);
   const nfTimer = useRef<number | null>(null);
@@ -50,6 +54,28 @@ export default function App() {
     return () => clearTimeout(t);
   }, []);
 
+  // استعادة جلسة الدخول المحفوظة على هذا الجهاز (إن وُجدت وكانت صالحة)
+  useEffect(() => {
+    const uname = getSessionUsername();
+    if (uname) {
+      const u = data.users.find((x) => x.username === uname);
+      if (u && !u.blocked) setCurrentUser(u);
+      else clearSession();
+    }
+    setAuthChecked(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function handleLoginSuccess(user: User) {
+    setSessionUsername(user.username);
+    setCurrentUser(user);
+  }
+
+  function handleLogout() {
+    clearSession();
+    setCurrentUser(null);
+  }
+
   // مزامنة تلقائية مع GitHub: عند فتح التطبيق ثم كل بضع دقائق،
   // حتى تظهر آخر تحديثات الأسعار على كل الأجهزة دون الحاجة لفتح
   // لوحة التحكم والضغط على "تنزيل" يدويًا.
@@ -59,7 +85,17 @@ export default function App() {
     let cancelled = false;
     async function sync() {
       const r = await pullFromGitHub({ owner, repo, branch, path, token: "" });
-      if (!cancelled && r.data) replaceAll(r.data);
+      if (cancelled || !r.data) return;
+      replaceAll(r.data);
+      // إن حُظر المستخدم الحالي أو حُذف من قائمة المستخدمين — سجّل خروجه فورًا
+      const uname = getSessionUsername();
+      if (uname) {
+        const u = r.data.users?.find((x) => x.username === uname);
+        if (!u || u.blocked) {
+          clearSession();
+          setCurrentUser(null);
+        }
+      }
     }
     sync();
     const id = window.setInterval(sync, 3 * 60 * 1000);
@@ -133,6 +169,20 @@ export default function App() {
   function clearResult() {
     clearTimers();
     setResult(null);
+  }
+
+  if (!authChecked) {
+    return <LoadingScreen visible />;
+  }
+
+  if (!currentUser) {
+    return (
+      <LoginScreen
+        theme={data.theme}
+        users={data.users}
+        onSuccess={handleLoginSuccess}
+      />
+    );
   }
 
   const themeVars = {
@@ -252,15 +302,27 @@ export default function App() {
         </div>
       )}
 
-      {/* زر الإعدادات */}
+      {/* زر تسجيل الخروج */}
       <button
-        onClick={() => setAdminOpen(true)}
-        aria-label="لوحة التحكم"
-        className="btn-press fixed bottom-4 right-4 z-30 flex h-12 w-12 items-center justify-center text-2xl"
-        title="الإعدادات"
+        onClick={handleLogout}
+        aria-label="تسجيل الخروج"
+        className="btn-press fixed bottom-4 left-4 z-30 flex h-12 w-12 items-center justify-center text-2xl"
+        title="تسجيل الخروج"
       >
-        ⚙️
+        🚪
       </button>
+
+      {/* زر الإعدادات — يظهر فقط للمدير */}
+      {currentUser.role === "admin" && (
+        <button
+          onClick={() => setAdminOpen(true)}
+          aria-label="لوحة التحكم"
+          className="btn-press fixed bottom-4 right-4 z-30 flex h-12 w-12 items-center justify-center text-2xl"
+          title="الإعدادات"
+        >
+          ⚙️
+        </button>
+      )}
 
       <AdminPanel
         open={adminOpen}

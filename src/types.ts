@@ -50,6 +50,15 @@ export interface GitHubConfig {
   path: string;
 }
 
+export interface User {
+  id: string;
+  username: string;
+  /** SHA-256 hex digest — لا يُخزَّن أي نص صريح لكلمة المرور */
+  passwordHash: string;
+  role: "admin" | "staff";
+  blocked: boolean;
+}
+
 export interface StoreData {
   products: Product[];
   offers: Offer[];
@@ -57,6 +66,7 @@ export interface StoreData {
   settings: Settings;
   theme: Theme;
   github: GitHubConfig;
+  users: User[];
 }
 
 export interface PriceBreakdown {
