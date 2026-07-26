@@ -1,0 +1,6682 @@
+{
+  "products": [
+    {
+      "itemCode": "001",
+      "merchantCode": "",
+      "name": "صنف PANDY STORE",
+      "unit": "قطعه",
+      "price": 340,
+      "originalPrice": 580,
+      "group": "اصناف خدمات"
+    },
+    {
+      "itemCode": "53",
+      "merchantCode": "",
+      "name": "ميس ميرو بنطلون جينز جرسونية بناتى",
+      "unit": "قطعه",
+      "price": 385,
+      "originalPrice": 3850,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "69",
+      "merchantCode": "",
+      "name": "دراجون جينز بنطلون محير اولادى",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "199",
+      "merchantCode": "",
+      "name": "بنطلون اولادى جينزلوجر",
+      "unit": "قطعه",
+      "price": 250,
+      "originalPrice": 250,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "202",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية بوى فريند سارة تكس",
+      "unit": "قطعه",
+      "price": 260,
+      "originalPrice": 260,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "204",
+      "merchantCode": "",
+      "name": "بنطلون اولادى جرسونية سارة تكس",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "230",
+      "merchantCode": "",
+      "name": "بنطلون ليجين سانتانا",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "337",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى محير تطريز H&M",
+      "unit": "قطعه",
+      "price": 210,
+      "originalPrice": 210,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "339",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية سارة تكس",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "344",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى البادى",
+      "unit": "قطعه",
+      "price": 250,
+      "originalPrice": 250,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "354",
+      "merchantCode": "",
+      "name": "بنطلون شروال بيكة وسط اولادى دراجون",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "367",
+      "merchantCode": "",
+      "name": "ميس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 680,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "369",
+      "merchantCode": "",
+      "name": "زيلان جينز بنطلون وسط اولادى",
+      "unit": "قطعه",
+      "price": 220,
+      "originalPrice": 220,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "370",
+      "merchantCode": "",
+      "name": "ميس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "889",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى محير هافانا",
+      "unit": "قطعه",
+      "price": 210,
+      "originalPrice": 210,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "891",
+      "merchantCode": "",
+      "name": "جوليانا بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "931",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى بولافيرا",
+      "unit": "قطعه",
+      "price": 370,
+      "originalPrice": 370,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1012",
+      "merchantCode": "",
+      "name": "ناير بنطلون كلاسيك اولادى كبير",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1018",
+      "merchantCode": "",
+      "name": "دراجوان جينز بنطلون بيكا وسط اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1036",
+      "merchantCode": "",
+      "name": "سان جورج بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1563",
+      "merchantCode": "",
+      "name": "ايرينى فاشون بنطلون جبردين اسود وسط اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1564",
+      "merchantCode": "",
+      "name": "ايرينى فاشون بنطلون جبردين اسود جرسونية اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1567",
+      "merchantCode": "",
+      "name": "جوليانا شروال اولادى بيكا باجى كبير الوان",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1646",
+      "merchantCode": "",
+      "name": "ماى ليدى بنطلون محير بناتى",
+      "unit": "قطعه",
+      "price": 410,
+      "originalPrice": 410,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1647",
+      "merchantCode": "",
+      "name": "اتش ام بنطلون جينز قلب جلد وسط بناتى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1648",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جرسونية بناتى",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 330,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1747",
+      "merchantCode": "",
+      "name": "سان جورج بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1769",
+      "merchantCode": "",
+      "name": "بنطلون جينز بيبى group 3",
+      "unit": "قطعه",
+      "price": 285,
+      "originalPrice": 285,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1770",
+      "merchantCode": "",
+      "name": "بنطلون جينز بيبى group 2",
+      "unit": "قطعه",
+      "price": 285,
+      "originalPrice": 285,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "1772",
+      "merchantCode": "",
+      "name": "بنطلون جبردين بيبى لبنى بناتى",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 330,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "1773",
+      "merchantCode": "",
+      "name": "بنطلون جبردين بيبى موف بناتى",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 330,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2050",
+      "merchantCode": "",
+      "name": "سان جورج بنطلون بناتى بيبى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2052",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز جرسونية كارجو طباعة بناتى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2070",
+      "merchantCode": "",
+      "name": "برفكت بنطلون بناتى شارلستون شريط",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2071",
+      "merchantCode": "",
+      "name": "ماى ليدى بنطلون وسط سكينى بناتى",
+      "unit": "قطعه",
+      "price": 365,
+      "originalPrice": 365,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2072",
+      "merchantCode": "",
+      "name": "جويس فاشون بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 365,
+      "originalPrice": 365,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2238",
+      "merchantCode": "",
+      "name": "اتش ام بنطلون بيكا اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2239",
+      "merchantCode": "",
+      "name": "البادى شروال اولادى جينز",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2287",
+      "merchantCode": "",
+      "name": "بنطلون جبردين مكسيسكى صغير",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 300,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2288",
+      "merchantCode": "",
+      "name": "بنطلون جبردين مكسيسكى كبير",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2292",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى بيبى AMB",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2296",
+      "merchantCode": "",
+      "name": "بنطلون جبردين اولادى AMB",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2344",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2346",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى صغير",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2347",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى صغير",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2392",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى جرسونية ميس ميرو",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2405",
+      "merchantCode": "",
+      "name": "دراجون جينز بنطلون كارجو بيكا جرسونية اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2406",
+      "merchantCode": "",
+      "name": "دارجون جينز بنطلون كارجو بيكا وسط اولادى",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2407",
+      "merchantCode": "",
+      "name": "دراجون جينز بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 330,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2408",
+      "merchantCode": "",
+      "name": "بنطلون شارلستون بناتى A&B",
+      "unit": "قطعه",
+      "price": 340,
+      "originalPrice": 340,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2410",
+      "merchantCode": "",
+      "name": "بنطلون شارلستون بناتى A&B",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2412",
+      "merchantCode": "",
+      "name": "بنطلون بوى فريندبناتىA&B",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2416",
+      "merchantCode": "",
+      "name": "بنطلون جبردين بابجى اولادى وسط",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2419",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى بيبى",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 300,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2420",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى SLIEM وسط",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2422",
+      "merchantCode": "",
+      "name": "بنطلون جينز  بناتى شارلستون فاتح وسط",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2425",
+      "merchantCode": "",
+      "name": "بنطلون جينز سادة بناتى شارلستون صغير",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2426",
+      "merchantCode": "",
+      "name": "بنطلون جينز  اسود بناتى شارلستون غامق كبير",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2455",
+      "merchantCode": "",
+      "name": "بنطلون اولادى هافانا وسط",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2457",
+      "merchantCode": "",
+      "name": "بنطلون اولادى هافانا محير",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2458",
+      "merchantCode": "",
+      "name": "بنطلون اولادى هافانا محير",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2459",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى شارلستون سانتانا",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2460",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى صغير سانتانا",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2461",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى صغير سانتانا",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2462",
+      "merchantCode": "",
+      "name": "بنطلون ليجين بناتى محير قطع ليزر سانتانا",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2528",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز جرسونيه باجى بناتى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2529",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز جرسونية وايد ليج بناتى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2530",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز جرسونية اديداس بناتى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2532",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى باجى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "2571",
+      "merchantCode": "",
+      "name": "جوليانا بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2578",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى AMB",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2584",
+      "merchantCode": "",
+      "name": "جوليانا بنطلون جبردين وات وسط",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2585",
+      "merchantCode": "",
+      "name": "جوليانا بنطلون جبردين وات صغير",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2589",
+      "merchantCode": "",
+      "name": "جوى جينز بنطلون وايت ليج اولادى محير",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2590",
+      "merchantCode": "",
+      "name": "جوى جينز بنطلون بوى فريند اولادى",
+      "unit": "قطعه",
+      "price": 445,
+      "originalPrice": 445,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2591",
+      "merchantCode": "",
+      "name": "جوى جينز بنطلون وايت ليج اولادى وسط",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2598",
+      "merchantCode": "",
+      "name": "جوى جينز بنطلون بوى فريند محير اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2608",
+      "merchantCode": "",
+      "name": "جوى جينز بنطلون باجى جرسونيه اولادى",
+      "unit": "قطعه",
+      "price": 385,
+      "originalPrice": 385,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "2639",
+      "merchantCode": "",
+      "name": "سان جورج بيبى رموش بناتى بيبى",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3017",
+      "merchantCode": "",
+      "name": "كيان بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3035",
+      "merchantCode": "",
+      "name": "بنطلون جينز جرسونيه وايت ليج بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 585,
+      "originalPrice": 585,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3036",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3038",
+      "merchantCode": "",
+      "name": "سالوبيت جرسونيه جينز تقطيع وطباعه مس ميرو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 720,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3039",
+      "merchantCode": "",
+      "name": "سالوبيت جينز جرسونيه 2 جيب مس ميرو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 720,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3041",
+      "merchantCode": "",
+      "name": "بنطلون جينز طباعه اطفالى مس ميرو",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3062",
+      "merchantCode": "",
+      "name": "بنطلون جينز  باجى مس ميرو",
+      "unit": "قطعه",
+      "price": 595,
+      "originalPrice": 595,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3131",
+      "merchantCode": "",
+      "name": "بنطلون جينز فاشون اوﻻدى كبير جوليانا",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 500,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3135",
+      "merchantCode": "",
+      "name": "بنطلون وايد ليج اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 475,
+      "originalPrice": 475,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3136",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3137",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 485,
+      "originalPrice": 485,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3142",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3143",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى كافالى",
+      "unit": "قطعه",
+      "price": 485,
+      "originalPrice": 485,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3145",
+      "merchantCode": "",
+      "name": "بنطلون بيكا اوﻻدى بيبى ايرينى فاشون",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3147",
+      "merchantCode": "",
+      "name": "بنطلون جينز اوﻻدى AMB",
+      "unit": "قطعه",
+      "price": 560,
+      "originalPrice": 560,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3148",
+      "merchantCode": "",
+      "name": "بنطلون جبردين وات اوﻻدى بيبى DONA",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3151",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى هافانا",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3152",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى هافانا",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3153",
+      "merchantCode": "",
+      "name": "بنطلون جبردين بيكا وسط DONA",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3155",
+      "merchantCode": "",
+      "name": "بنطلون جينز نيو سكاى اوﻻدى محير DONA",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 500,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3156",
+      "merchantCode": "",
+      "name": "بنطلون كارجو جينز جرسونيه اوﻻدى دراجون",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3157",
+      "merchantCode": "",
+      "name": "بنطلون جبردين جرسونيه اوﻻدى وسط دراجون",
+      "unit": "قطعه",
+      "price": 465,
+      "originalPrice": 465,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3158",
+      "merchantCode": "",
+      "name": "بنطلون جبردين بيكا جرسونيه وسط دراجون",
+      "unit": "قطعه",
+      "price": 465,
+      "originalPrice": 465,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3159",
+      "merchantCode": "",
+      "name": "بنطلون جينز سيتى وير",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3160",
+      "merchantCode": "",
+      "name": "بنطلون جينز سيتى وير",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3201",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى جينز مقطع",
+      "unit": "قطعه",
+      "price": 610,
+      "originalPrice": 610,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3205",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3206",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3207",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية ارميس",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3208",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جينز ميس ميرو",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3212",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز وايت ليج",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3215",
+      "merchantCode": "",
+      "name": "بنطلون جبردين وسط جوليانا",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3216",
+      "merchantCode": "",
+      "name": "بنطلون جبردين اولادى جوليانا",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 530,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3217",
+      "merchantCode": "",
+      "name": "بنطلون جبردين اولادى جوليانا",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3219",
+      "merchantCode": "",
+      "name": "بنطلون كارجو ايرينى فاشون",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3220",
+      "merchantCode": "",
+      "name": "بنطلون جوليانا",
+      "unit": "قطعه",
+      "price": 495,
+      "originalPrice": 495,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3221",
+      "merchantCode": "",
+      "name": "بنطلون جينز سيتى وير",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3222",
+      "merchantCode": "",
+      "name": "بنطلون جينز سيتى وير",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3223",
+      "merchantCode": "",
+      "name": "بنطلون جينز جوى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3224",
+      "merchantCode": "",
+      "name": "بنطلون جوليانا",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3225",
+      "merchantCode": "",
+      "name": "بنطلون جينز جوى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3226",
+      "merchantCode": "",
+      "name": "بنطلون اولادى جينز محير مافيا",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3227",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى شالستون مس ميرو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3228",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى كيدزو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3238",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى شارلستون بيج",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3239",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى وايد ليج شراشيب وسط",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3240",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى وايد ليج شرايب صغير",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3254",
+      "merchantCode": "",
+      "name": "بنطلون جبردين باجى محير",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 500,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3259",
+      "merchantCode": "",
+      "name": "لوجينا جيبة جينز تقطيع بناتى",
+      "unit": "قطعه",
+      "price": 375,
+      "originalPrice": 375,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3260",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز اميرى",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3458",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3274",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 625,
+      "originalPrice": 625,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3302",
+      "merchantCode": "",
+      "name": "دريمان جينز بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3313",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى AMB",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3314",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى AMB",
+      "unit": "قطعه",
+      "price": 495,
+      "originalPrice": 495,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3315",
+      "merchantCode": "",
+      "name": "بنطلونى شورت اولادى",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3346",
+      "merchantCode": "",
+      "name": "كفالى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3348",
+      "merchantCode": "",
+      "name": "بنطلون جينز جبردين جرسونية دراجون",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3440",
+      "merchantCode": "",
+      "name": "ناير بنطلون ليجين اولادى وسط",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3441",
+      "merchantCode": "",
+      "name": "ناير بنطلون ليجين اولادى كبير",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3459",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3461",
+      "merchantCode": "",
+      "name": "ايرينى فاشون شروال بيكا  وسط",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3467",
+      "merchantCode": "",
+      "name": "ايرينى فاشون شروال بيكا بيبى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3468",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى وايد ليج قلوب",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3469",
+      "merchantCode": "",
+      "name": "بنطلون بناتى وايد ليج استراس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3470",
+      "merchantCode": "",
+      "name": "بنطلون بناتى وايد ليج استراس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "282",
+      "merchantCode": "",
+      "name": "طقم علبة الزرافة والنجمة مون لايت",
+      "unit": "قطعه",
+      "price": 170,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "300",
+      "merchantCode": "",
+      "name": "طقم اطفالى زيركون",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "970",
+      "merchantCode": "",
+      "name": "ترنج بناتى STAR جنة كيدز",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "1082",
+      "merchantCode": "",
+      "name": "ترينج بناتى نيو ستار",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "1095",
+      "merchantCode": "",
+      "name": "ميس جنة ترينج بناتى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "2040",
+      "merchantCode": "",
+      "name": "كيدو بيجامة بناتى شورت دبدوب و قلوب",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "2427",
+      "merchantCode": "",
+      "name": "بيجامة بناتى شورت ورد",
+      "unit": "قطعه",
+      "price": 405,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "74",
+      "merchantCode": "",
+      "name": "الراعى تيشيرت حوض اولادى صغير",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "900",
+      "merchantCode": "",
+      "name": "فور ايفر تيشيرت بيبى اولادى",
+      "unit": "قطعه",
+      "price": 290,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "1077",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى لايك BIG DAY",
+      "unit": "قطعه",
+      "price": 280,
+      "originalPrice": 280,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2081",
+      "merchantCode": "",
+      "name": "علبة ويكا ف تل حلزونى",
+      "unit": "قطعه",
+      "price": 435,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2082",
+      "merchantCode": "",
+      "name": "علبة ويكا فستان خيط ملون",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2090",
+      "merchantCode": "",
+      "name": "علبة ويكا سالوبيت زهرة اللوتس",
+      "unit": "قطعه",
+      "price": 355,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2178",
+      "merchantCode": "",
+      "name": "تو بي تيشرت اولادى محير",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2205",
+      "merchantCode": "",
+      "name": "لايك تيشرت اولادى",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2213",
+      "merchantCode": "",
+      "name": "قميص مطبوع شهور",
+      "unit": "قطعه",
+      "price": 315,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2223",
+      "merchantCode": "",
+      "name": "بدى كت مينى بيبى",
+      "unit": "قطعه",
+      "price": 135,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2224",
+      "merchantCode": "",
+      "name": "بدى ابيض وسط",
+      "unit": "قطعه",
+      "price": 165,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2225",
+      "merchantCode": "",
+      "name": "بدى ابيض صغير",
+      "unit": "قطعه",
+      "price": 135,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2261",
+      "merchantCode": "",
+      "name": "الحافظ سيتى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2262",
+      "merchantCode": "",
+      "name": "بيبى ستار قميص أكسفورد اولادى محير",
+      "unit": "قطعه",
+      "price": 375,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2275",
+      "merchantCode": "",
+      "name": "ابل تيشيرت اولادى محير",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2277",
+      "merchantCode": "",
+      "name": "ابل تيشيرت اولادى محير",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2306",
+      "merchantCode": "",
+      "name": "لايك بدى بناتى",
+      "unit": "قطعه",
+      "price": 280,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2317",
+      "merchantCode": "",
+      "name": "بابلى بلوزة بناتى",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2353",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى رواند ABC صغير",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2356",
+      "merchantCode": "",
+      "name": "توينز بناتى كاروة جيب على الصدر",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2359",
+      "merchantCode": "",
+      "name": "بلوزة بناتى كت نطريز ورد بطول البلوزة",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2362",
+      "merchantCode": "",
+      "name": "بلوزة بناتى هاى وسط ابيض × ورد",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2388",
+      "merchantCode": "",
+      "name": "تيشيرت ابيض جارسونية",
+      "unit": "قطعه",
+      "price": 185,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2389",
+      "merchantCode": "",
+      "name": "تيشيرت بولو هيكل سمكة زيتى وسط",
+      "unit": "قطعه",
+      "price": 320,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "2402",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى GOOD GIRL",
+      "unit": "قطعه",
+      "price": 370,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "2415",
+      "merchantCode": "",
+      "name": "شميز بناتى اورانج كم فى كتابة ع الصدر",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "55",
+      "merchantCode": "",
+      "name": "الراعى شورت جبردين بناتى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "353",
+      "merchantCode": "",
+      "name": "شورت جينز اولادى وسط هافانا",
+      "unit": "قطعه",
+      "price": 340,
+      "originalPrice": 340,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "923",
+      "merchantCode": "",
+      "name": "شورت بيبى بيكا رسمة بات مان",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "941",
+      "merchantCode": "",
+      "name": "ماستر جينز شورت بناتى",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 300,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2057",
+      "merchantCode": "",
+      "name": "الراعى جيبة جبردين بناتى زيرو",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2256",
+      "merchantCode": "",
+      "name": "جوليانا برمودة جينز فاشون اولادى وسط",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2289",
+      "merchantCode": "",
+      "name": "شورت اولادى جبردين 2 جيب زيتى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2311",
+      "merchantCode": "",
+      "name": "شورت اطفالى CUTTING جينز لاكى تاكى",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2320",
+      "merchantCode": "",
+      "name": "جوليانا بنتاكور جينز تكسير اولادى وسط",
+      "unit": "قطعه",
+      "price": 370,
+      "originalPrice": 370,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2321",
+      "merchantCode": "",
+      "name": "جوليانا شورت جينز تكسير اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2340",
+      "merchantCode": "",
+      "name": "شورت بيبى اولادى",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 300,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2398",
+      "merchantCode": "",
+      "name": "شورت جبردين باركر",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2399",
+      "merchantCode": "",
+      "name": "شورت جبردين باركر",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2409",
+      "merchantCode": "",
+      "name": "جيبة بناتى وسط A&B",
+      "unit": "قطعه",
+      "price": 285,
+      "originalPrice": 285,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2413",
+      "merchantCode": "",
+      "name": "شورت استيك بناتى A&B",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 300,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2520",
+      "merchantCode": "",
+      "name": "بنتى جيبة بناتى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 350,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "158",
+      "merchantCode": "",
+      "name": "فانى بانى بنطلون مطبوع بيبى  12/18",
+      "unit": "قطعه",
+      "price": 45,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "159",
+      "merchantCode": "",
+      "name": "فانى بانى بنطلون مطبوع بيبى  18/24",
+      "unit": "قطعه",
+      "price": 45,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "160",
+      "merchantCode": "",
+      "name": "فانى بانى فانلة ابيض بيبى  0/3",
+      "unit": "قطعه",
+      "price": 30,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "162",
+      "merchantCode": "",
+      "name": "فانى بانى فانلة ابيض بيبى 6/12",
+      "unit": "قطعه",
+      "price": 30,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "163",
+      "merchantCode": "",
+      "name": "فانى بانى فانلة ابيض بيبى 12/18",
+      "unit": "قطعه",
+      "price": 35,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "165",
+      "merchantCode": "",
+      "name": "فانى بانى بنطلون ابيض بيبى 3/6",
+      "unit": "قطعه",
+      "price": 35,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "167",
+      "merchantCode": "",
+      "name": "فانى بانى بنطلون ابيض بيبى 12/18",
+      "unit": "قطعه",
+      "price": 35,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "168",
+      "merchantCode": "",
+      "name": "فانى بانى بنطلونا بيض بيبى 18/24",
+      "unit": "قطعه",
+      "price": 40,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "169",
+      "merchantCode": "",
+      "name": "فانى بانى سالوبيت ابيض بيبى 0/3",
+      "unit": "قطعه",
+      "price": 40,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "170",
+      "merchantCode": "",
+      "name": "فانى بانى سالوبيت ابيض بيبى 3/6",
+      "unit": "قطعه",
+      "price": 40,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "171",
+      "merchantCode": "",
+      "name": "فانى بانى سالوبيت ابيض بيبى 6/12",
+      "unit": "قطعه",
+      "price": 45,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "172",
+      "merchantCode": "",
+      "name": "فانى بانى سالوبيت  ابيض بيبى 12/18",
+      "unit": "قطعه",
+      "price": 45,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "173",
+      "merchantCode": "",
+      "name": "فانى بانى سالوبيت  ابيض بيبى 18/24",
+      "unit": "قطعه",
+      "price": 45,
+      "originalPrice": 0,
+      "group": "داخلى اطفالى"
+    },
+    {
+      "itemCode": "3048",
+      "merchantCode": "",
+      "name": "توينز بناتى هابى بيبى",
+      "unit": "قطعه",
+      "price": 595,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3071",
+      "merchantCode": "",
+      "name": "ترنج بناتى كيدز ستورى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3072",
+      "merchantCode": "",
+      "name": "ترينج بيبى اوﻻدى جوى B",
+      "unit": "قطعه",
+      "price": 410,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3074",
+      "merchantCode": "",
+      "name": "ترنج اطفالى جوى B",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3077",
+      "merchantCode": "",
+      "name": "ترينج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 605,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3078",
+      "merchantCode": "",
+      "name": "ترينج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 605,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3081",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى بامبولا",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3083",
+      "merchantCode": "",
+      "name": "ترنج اطفالى سافيور",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3091",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 465,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3099",
+      "merchantCode": "",
+      "name": "سالوبيت بيبى فيوتشر بوى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3100",
+      "merchantCode": "",
+      "name": "طقم قميص جبال وسحاب كم سوبر كيدز",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3101",
+      "merchantCode": "",
+      "name": "توينز اولادى حديث ولادة كاب",
+      "unit": "قطعه",
+      "price": 475,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3105",
+      "merchantCode": "",
+      "name": "قميص اوﻻدى محير ميركيل",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3108",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى جولدن بوى",
+      "unit": "قطعه",
+      "price": 790,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3122",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 695,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3123",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كاب",
+      "unit": "قطعه",
+      "price": 560,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3132",
+      "merchantCode": "",
+      "name": "شورت اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3140",
+      "merchantCode": "",
+      "name": "شورت اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 390,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3141",
+      "merchantCode": "",
+      "name": "بنتاكور اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3170",
+      "merchantCode": "",
+      "name": "قميص كم محير",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3181",
+      "merchantCode": "",
+      "name": "ترينج بناتى كارلوس",
+      "unit": "قطعه",
+      "price": 605,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3187",
+      "merchantCode": "",
+      "name": "ترنج اولادى ميكاو",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3188",
+      "merchantCode": "",
+      "name": "بيجامة بناتى كابى كيدز",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3190",
+      "merchantCode": "",
+      "name": "ترنج اطفالى نيو ستار حبة كراميل",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3199",
+      "merchantCode": "",
+      "name": "قميص اولادى سادة كبير",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3203",
+      "merchantCode": "",
+      "name": "يو بى توينز بناتى جينز شراشيب",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3214",
+      "merchantCode": "",
+      "name": "ثرى كاتس بلوزة بناتى",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3229",
+      "merchantCode": "",
+      "name": "طقم اولادى 3 ق كيدزو",
+      "unit": "قطعه",
+      "price": 1100,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3232",
+      "merchantCode": "",
+      "name": "توينز اولادى كاروه كيدزو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3233",
+      "merchantCode": "",
+      "name": "توينز اولادى كاروه كيدزو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3236",
+      "merchantCode": "",
+      "name": "توينز اولادى ساده كيدزو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3237",
+      "merchantCode": "",
+      "name": "قميص اولادى كم كاروه كيدزو",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3252",
+      "merchantCode": "",
+      "name": "تى شيرت اولادى راوند ITALIANO",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3255",
+      "merchantCode": "",
+      "name": "سكاى كيدز تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3256",
+      "merchantCode": "",
+      "name": "سكاى كيدز تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3257",
+      "merchantCode": "",
+      "name": "سكاى كيدز تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3258",
+      "merchantCode": "",
+      "name": "سكاى كيدز تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3262",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى ميلون",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3263",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 385,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3264",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3266",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3267",
+      "merchantCode": "",
+      "name": "لايك تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3273",
+      "merchantCode": "",
+      "name": "جورى كيدز بلوزة بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3276",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 320,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3277",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3278",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3279",
+      "merchantCode": "",
+      "name": "روسى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3280",
+      "merchantCode": "",
+      "name": "تو بى تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3281",
+      "merchantCode": "",
+      "name": "الموند تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3283",
+      "merchantCode": "",
+      "name": "الموند تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3286",
+      "merchantCode": "",
+      "name": "سلمى شورت بناتى",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3287",
+      "merchantCode": "",
+      "name": "سلمى شورت بناتى",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3288",
+      "merchantCode": "",
+      "name": "سلمى شورت بناتى",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3289",
+      "merchantCode": "",
+      "name": "سلمى شورت بناتى",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 360,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3290",
+      "merchantCode": "",
+      "name": "ماى ليدى شورت بناتى",
+      "unit": "قطعه",
+      "price": 375,
+      "originalPrice": 375,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3296",
+      "merchantCode": "",
+      "name": "بروتيا فستان بيبى بناتى",
+      "unit": "قطعه",
+      "price": 765,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3297",
+      "merchantCode": "",
+      "name": "ميلون طقم بناتى",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3298",
+      "merchantCode": "",
+      "name": "داندى كيدز طقم بناتى شورت",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3300",
+      "merchantCode": "",
+      "name": "لولو كيدز بدلة بناتى شورت",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3301",
+      "merchantCode": "",
+      "name": "جورى كيدز طقم بناتى شورت",
+      "unit": "قطعه",
+      "price": 670,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3303",
+      "merchantCode": "",
+      "name": "ايرينى فاشون شورت بيكا بيبى اولادى",
+      "unit": "قطعه",
+      "price": 370,
+      "originalPrice": 370,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3304",
+      "merchantCode": "",
+      "name": "تو بى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 300,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3305",
+      "merchantCode": "",
+      "name": "تو بى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3307",
+      "merchantCode": "",
+      "name": "تو بى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3309",
+      "merchantCode": "",
+      "name": "تو بى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3316",
+      "merchantCode": "",
+      "name": "شورت جبردين اولادى استلينا",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 380,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3317",
+      "merchantCode": "",
+      "name": "تشيرت اولادى ابل",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3320",
+      "merchantCode": "",
+      "name": "تشيرت اولادى ابل",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3321",
+      "merchantCode": "",
+      "name": "تشيرت اولادى ابل",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3325",
+      "merchantCode": "",
+      "name": "تشيرت اولادى ابل",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3326",
+      "merchantCode": "",
+      "name": "باندينو تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3330",
+      "merchantCode": "",
+      "name": "مينى مال تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3334",
+      "merchantCode": "",
+      "name": "لايك تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3340",
+      "merchantCode": "",
+      "name": "ليتل اس طقم اولادى 1/2 من صيفى",
+      "unit": "قطعه",
+      "price": 890,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3341",
+      "merchantCode": "",
+      "name": "نوفا تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3342",
+      "merchantCode": "",
+      "name": "ديموس اسكندرية توينز اولادى 1/2 كم",
+      "unit": "قطعه",
+      "price": 625,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3343",
+      "merchantCode": "",
+      "name": "ديموس اسكندرية قميص اولادى جرسونية",
+      "unit": "قطعه",
+      "price": 560,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3349",
+      "merchantCode": "",
+      "name": "جوليانا برمودة اولادى",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3350",
+      "merchantCode": "",
+      "name": "جوليانا شورت اولادى",
+      "unit": "قطعه",
+      "price": 385,
+      "originalPrice": 385,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3351",
+      "merchantCode": "",
+      "name": "جوليانا شورت اولادى",
+      "unit": "قطعه",
+      "price": 385,
+      "originalPrice": 385,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3353",
+      "merchantCode": "",
+      "name": "الراعى تيشيرت وسط اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3356",
+      "merchantCode": "",
+      "name": "الراعى تيشيرت محير اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3357",
+      "merchantCode": "",
+      "name": "الراعى تيشيرت حوض محير اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3362",
+      "merchantCode": "",
+      "name": "مو كيدز بادى اولادى صغير",
+      "unit": "قطعه",
+      "price": 160,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3363",
+      "merchantCode": "",
+      "name": "مو كيدز بادى اولادى كبير",
+      "unit": "قطعه",
+      "price": 185,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3364",
+      "merchantCode": "",
+      "name": "جوينت تيشيرت بولو اولادى",
+      "unit": "قطعه",
+      "price": 410,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3366",
+      "merchantCode": "",
+      "name": "الارم تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 310,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3368",
+      "merchantCode": "",
+      "name": "الراعى تشيرت وسط اولادى",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3369",
+      "merchantCode": "",
+      "name": "الارم تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 340,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3372",
+      "merchantCode": "",
+      "name": "مونتير تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3373",
+      "merchantCode": "",
+      "name": "مونتير تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3375",
+      "merchantCode": "",
+      "name": "بابلو كيدز تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3376",
+      "merchantCode": "",
+      "name": "روسى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3377",
+      "merchantCode": "",
+      "name": "روسى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3378",
+      "merchantCode": "",
+      "name": "روسى تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3381",
+      "merchantCode": "",
+      "name": "كارلوس ترنج اولادى",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3393",
+      "merchantCode": "",
+      "name": "راما ترنج اولادى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3396",
+      "merchantCode": "",
+      "name": "رينبو 3 ترنج اولادى",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3400",
+      "merchantCode": "",
+      "name": "رينبو 3 ترنج اولادى",
+      "unit": "قطعه",
+      "price": 465,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3401",
+      "merchantCode": "",
+      "name": "كودى ترنج اولادى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 880,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3405",
+      "merchantCode": "",
+      "name": "سوبر كيدز فستان بوبلين استيك وسط وردة",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3407",
+      "merchantCode": "",
+      "name": "منت سالوبيت بيبى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3408",
+      "merchantCode": "",
+      "name": "رينبو 3 ترنج اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3409",
+      "merchantCode": "",
+      "name": "بيبى لايف طقم بناتى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3410",
+      "merchantCode": "",
+      "name": "مارشيملو طقم بناتى",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3411",
+      "merchantCode": "",
+      "name": "فادو كيدزترنج بيبى شماعة",
+      "unit": "قطعه",
+      "price": 375,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3412",
+      "merchantCode": "",
+      "name": "جوى B ترنج بناتى شماعة",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3414",
+      "merchantCode": "",
+      "name": "الطفل الأشقر فستان بناتى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3415",
+      "merchantCode": "",
+      "name": "منت بيجامة اولادى",
+      "unit": "قطعه",
+      "price": 375,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3422",
+      "merchantCode": "",
+      "name": "تو بى تو الطفل الأشقر ترنج اولادى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3423",
+      "merchantCode": "",
+      "name": "تو بى تو الطفل الأشقر ترنج بناتى",
+      "unit": "قطعه",
+      "price": 510,
+      "originalPrice": 0,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "3424",
+      "merchantCode": "",
+      "name": "تو بى تو الطفل الأشقر ترنج اولادى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3434",
+      "merchantCode": "",
+      "name": "حبة كراميل نيو ستار ترنج بيبى اطفالى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3435",
+      "merchantCode": "",
+      "name": "حبة كراميل نيو ستار ترنج بيبى اطفالى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 0,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "3436",
+      "merchantCode": "",
+      "name": "بنتاكور جينز اولادى AMB",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 525,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3437",
+      "merchantCode": "",
+      "name": "جوليانا شورت اولادى نيو سكاى كبير",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 525,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3438",
+      "merchantCode": "",
+      "name": "جوليانا شورت اولادى نيو سكاى وسط",
+      "unit": "قطعه",
+      "price": 475,
+      "originalPrice": 475,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3442",
+      "merchantCode": "",
+      "name": "الدرادو تيشيرت اولادى",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3453",
+      "merchantCode": "",
+      "name": "جوليانا برمودة اولادى",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 530,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3454",
+      "merchantCode": "",
+      "name": "جوليانا برمودة اولادى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 500,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3455",
+      "merchantCode": "",
+      "name": "دراجون جينز شورت جبردين جرسونية اولادى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3456",
+      "merchantCode": "",
+      "name": "دراجون جينز شورت جبردين جرسونية اولادى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3457",
+      "merchantCode": "",
+      "name": "دراجون جينز شورت جبردين جرسونية اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3462",
+      "merchantCode": "",
+      "name": "دراجون جينز شورت جينز كارجو اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3463",
+      "merchantCode": "",
+      "name": "جوليانا شورت اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "2193",
+      "merchantCode": "",
+      "name": "بدى بوب وان سادة اولادى صغير",
+      "unit": "قطعه",
+      "price": 135,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3518",
+      "merchantCode": "",
+      "name": "بنطلون بناتى ارميس",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3520",
+      "merchantCode": "",
+      "name": "بنطلون بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 630,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3521",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونبه اوسكار وايد ليج مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3522",
+      "merchantCode": "",
+      "name": "بنطلون بناتى مس ميرو فيونكة",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3524",
+      "merchantCode": "",
+      "name": "بنطلون بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3525",
+      "merchantCode": "",
+      "name": "بنطلون بناتى بنتى فيونكة",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3526",
+      "merchantCode": "",
+      "name": "بنطلون وايد ليج بناتى بلو جينز",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3534",
+      "merchantCode": "",
+      "name": "بنطلون بناتى ارميس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3535",
+      "merchantCode": "",
+      "name": "بنطلون بناتى AMB",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3558",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى كافالى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3561",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى ايرينى فاشون",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3568",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى كافالى",
+      "unit": "قطعه",
+      "price": 510,
+      "originalPrice": 510,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3569",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى كافالى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3570",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى AMB",
+      "unit": "قطعه",
+      "price": 540,
+      "originalPrice": 540,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3571",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3572",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى دراجون جينز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3573",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى سيتى وير جينز",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 630,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3666",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى زورو",
+      "unit": "قطعه",
+      "price": 900,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3658",
+      "merchantCode": "",
+      "name": "بنطلون اولادى سيتى وير جينز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3659",
+      "merchantCode": "",
+      "name": "بنطلون اولادى سيتى وير جينز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3660",
+      "merchantCode": "",
+      "name": "بنطلون اولادى دراجون جينز",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3661",
+      "merchantCode": "",
+      "name": "بنطلون اولادى دراجون جينز",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3676",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3677",
+      "merchantCode": "",
+      "name": "بنطلون بناتى بنتى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3679",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3680",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى جرسونية بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3681",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3678",
+      "merchantCode": "",
+      "name": "بنطلون بناتى بيتى سان جورج",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3683",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3684",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج بيبى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3689",
+      "merchantCode": "",
+      "name": "بنطلون اولادى كافالى",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3690",
+      "merchantCode": "",
+      "name": "بنطلون جينز ليجين بيبى دراجون",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3701",
+      "merchantCode": "",
+      "name": "بنطلون بناتى بيبى رموش سان جورج",
+      "unit": "قطعه",
+      "price": 465,
+      "originalPrice": 465,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3702",
+      "merchantCode": "",
+      "name": "بنطلون وسط استراس بناتى ارميس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3724",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية اوسكار مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3725",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3726",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 610,
+      "originalPrice": 610,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3727",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سلوشى اسود يوزد جيب مس ميرو",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 620,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3728",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية استراس مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3729",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 610,
+      "originalPrice": 610,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3730",
+      "merchantCode": "",
+      "name": "بنطلون بناتى جرسونية طباعة قلوب مس ميرو",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 650,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3731",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 620,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3732",
+      "merchantCode": "",
+      "name": "بنطلون بناتى استراس مس ميرو",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 590,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3733",
+      "merchantCode": "",
+      "name": "بنطلون وايد ليج اوسكار بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3734",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 590,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3752",
+      "merchantCode": "",
+      "name": "بنطلون بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3753",
+      "merchantCode": "",
+      "name": "بنطلون بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3754",
+      "merchantCode": "",
+      "name": "بنطلون بناتى فيونكة مس ميرو",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 600,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3755",
+      "merchantCode": "",
+      "name": "اتش اند ام بنطلون جينز بوى فريند اولادى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3756",
+      "merchantCode": "",
+      "name": "اتش اند ام بنطلون جينز بوى فريند اولادى",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3757",
+      "merchantCode": "",
+      "name": "بنطلون شروال جبردين دراجون",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 525,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3758",
+      "merchantCode": "",
+      "name": "بنطلون شروال جبردين دراجون",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3770",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3772",
+      "merchantCode": "",
+      "name": "بنطلون بنطلونى جينز وايد ليج",
+      "unit": "قطعه",
+      "price": 560,
+      "originalPrice": 560,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3774",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى كفالى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3775",
+      "merchantCode": "",
+      "name": "بنطلون جينز اولادى كفالى",
+      "unit": "قطعه",
+      "price": 565,
+      "originalPrice": 565,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3776",
+      "merchantCode": "",
+      "name": "بنطلون بنطلونى جينز اولادى",
+      "unit": "قطعه",
+      "price": 565,
+      "originalPrice": 565,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3777",
+      "merchantCode": "",
+      "name": "بنطلون بنطلون اميرى اولادى",
+      "unit": "قطعه",
+      "price": 560,
+      "originalPrice": 560,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3780",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 525,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3781",
+      "merchantCode": "",
+      "name": "البادى سالوبيت جينز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3782",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 575,
+      "originalPrice": 575,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3783",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 600,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3784",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3785",
+      "merchantCode": "",
+      "name": "البادى سالوبيت جينز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3786",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 595,
+      "originalPrice": 595,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3787",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 595,
+      "originalPrice": 595,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3788",
+      "merchantCode": "",
+      "name": "البادى بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 600,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3804",
+      "merchantCode": "",
+      "name": "بنطلون بناتى سان جورج",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3819",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3820",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 650,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3821",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى جرسونية قطع طباعة",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3825",
+      "merchantCode": "",
+      "name": "فيمكا بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3836",
+      "merchantCode": "",
+      "name": "بنطلونى بنطلون جينز اولادى وايد ليج محير",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3863",
+      "merchantCode": "",
+      "name": "بنطلون اولادى AMB",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3864",
+      "merchantCode": "",
+      "name": "بنطلون جبردين اولادى AMB",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3865",
+      "merchantCode": "",
+      "name": "اتش ام الصياد بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3866",
+      "merchantCode": "",
+      "name": "اتش ام الصياد بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3867",
+      "merchantCode": "",
+      "name": "دونا DONNA بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3868",
+      "merchantCode": "",
+      "name": "دونا DONNA بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 510,
+      "originalPrice": 510,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3869",
+      "merchantCode": "",
+      "name": "دونا DONNA بنطلون جينز بيبى اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3870",
+      "merchantCode": "",
+      "name": "دونا DONNA بنطلون اولادى",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3871",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى وايد ليج فتحة جانبية محير",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 590,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3872",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى وايد ليج كرانيش",
+      "unit": "قطعه",
+      "price": 525,
+      "originalPrice": 525,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3873",
+      "merchantCode": "",
+      "name": "جيبة جينز بناتى ورد وسط",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3875",
+      "merchantCode": "",
+      "name": "بنطلون جينز وايد ليج محير اولادى",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 590,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3876",
+      "merchantCode": "",
+      "name": "بنطلون جينز وايد ليج محير اولادى",
+      "unit": "قطعه",
+      "price": 590,
+      "originalPrice": 590,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3877",
+      "merchantCode": "",
+      "name": "بنطلون جينز بلو بلاك اولادى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3878",
+      "merchantCode": "",
+      "name": "بنطلون جينز رمادى اولادى",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3911",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "3915",
+      "merchantCode": "",
+      "name": "بنطلون اولادى البادى",
+      "unit": "قطعه",
+      "price": 540,
+      "originalPrice": 540,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3917",
+      "merchantCode": "",
+      "name": "توينز اولادى كاروة كحلى كبير",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3918",
+      "merchantCode": "",
+      "name": "توينز اولادى بيج خطوط رفيعة وسط",
+      "unit": "قطعه",
+      "price": 535,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3919",
+      "merchantCode": "",
+      "name": "توينز اولادى كحلى غامق × خطوط بنى",
+      "unit": "قطعه",
+      "price": 535,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3920",
+      "merchantCode": "",
+      "name": "توينز اولادى محير كاتينج زيتى",
+      "unit": "قطعه",
+      "price": 675,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3921",
+      "merchantCode": "",
+      "name": "توينز اولاد بيج فاتح × خطوط بنى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3922",
+      "merchantCode": "",
+      "name": "توينز اولادى مقلم خطوط رفيعة اصفر كناري",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3923",
+      "merchantCode": "",
+      "name": "توينز اولادى رمادى × ابيض",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3924",
+      "merchantCode": "",
+      "name": "توينز اولادى مقلم خطوط رفيعة وسط",
+      "unit": "قطعه",
+      "price": 675,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3925",
+      "merchantCode": "",
+      "name": "توينز اولادى مقلم خطوط كحلى",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3926",
+      "merchantCode": "",
+      "name": "اتش اند ام بنطلون جينز بوى فريند اولادى",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 570,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3929",
+      "merchantCode": "",
+      "name": "اتش اند ام بنطلون جينز اولادى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3927",
+      "merchantCode": "",
+      "name": "نمبر وان MN توينز اولادى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3930",
+      "merchantCode": "",
+      "name": "بنطلون جينز دريمان اولادى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3931",
+      "merchantCode": "",
+      "name": "توينز اولادى محير جينز",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3932",
+      "merchantCode": "",
+      "name": "توينز اولادى محير جيب اسود",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3933",
+      "merchantCode": "",
+      "name": "توينز كاروهات محير احمر × كحلى",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3934",
+      "merchantCode": "",
+      "name": "توينز كاروهات ابيض بيبى",
+      "unit": "قطعه",
+      "price": 535,
+      "originalPrice": 0,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3935",
+      "merchantCode": "",
+      "name": "بوبوس NM بلوزة شبك سوارية الوان",
+      "unit": "قطعه",
+      "price": 605,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3936",
+      "merchantCode": "",
+      "name": "بوبوس NM بلوزة شبك اسود",
+      "unit": "قطعه",
+      "price": 605,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3937",
+      "merchantCode": "",
+      "name": "توماس بلوزة بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3938",
+      "merchantCode": "",
+      "name": "البطولة كيدز تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 670,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3939",
+      "merchantCode": "",
+      "name": "شاين كيدز تيشيرت بناتى محير",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3940",
+      "merchantCode": "",
+      "name": "شاين كيدز تيشيرت بناتى محير",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3941",
+      "merchantCode": "",
+      "name": "شاين كيدز تيشيرت بناتى محير",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3942",
+      "merchantCode": "",
+      "name": "شاين كيدز تيشيرت بناتى محير",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3943",
+      "merchantCode": "",
+      "name": "جويس فاشون شورت مع شنطة بناتى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3944",
+      "merchantCode": "",
+      "name": "كيتى كات تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3945",
+      "merchantCode": "",
+      "name": "كيتى كات تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3946",
+      "merchantCode": "",
+      "name": "كوجى توينز بناتى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3947",
+      "merchantCode": "",
+      "name": "فيلو بلوزة بناتى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 0,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3948",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى اية فور",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 530,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3949",
+      "merchantCode": "",
+      "name": "شورت جبردين اوﻻدى دراجون جينز",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 530,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3950",
+      "merchantCode": "",
+      "name": "شورت جبردين اوﻻدى دراجون جينز",
+      "unit": "قطعه",
+      "price": 510,
+      "originalPrice": 510,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3951",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى ماى ليدى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3952",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى ماى ليدى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3953",
+      "merchantCode": "",
+      "name": "بنطلون اوﻻدى ماى ليدى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "3954",
+      "merchantCode": "",
+      "name": "شورت بيبى اوﻻدى ماى ليدى",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 460,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3955",
+      "merchantCode": "",
+      "name": "شورت جبردين اوﻻدى دراجون جينز",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3956",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى جوينت",
+      "unit": "قطعه",
+      "price": 485,
+      "originalPrice": 650,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3957",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى سمر مود",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3958",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى برازر",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 740,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3959",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى برازر",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 740,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3960",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى بابلو كيدز",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 530,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3961",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى بابلو كيدز",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 615,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3962",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى سمر مود",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 630,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3963",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى سمر مود",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 520,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3964",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى جوينت",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 790,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3965",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى سمر مود",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 510,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3966",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى الراعى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 560,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3967",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 740,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3968",
+      "merchantCode": "",
+      "name": "برموده اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 585,
+      "originalPrice": 585,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3969",
+      "merchantCode": "",
+      "name": "برموده اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3970",
+      "merchantCode": "",
+      "name": "شورت اوﻻدى جوليانا",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "3971",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى جوينت",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 750,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3972",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى مودرن كيدز",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 555,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3973",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 730,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3974",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 760,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3975",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 730,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3976",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3977",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 615,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3978",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 730,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3979",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى فيموس",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 630,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3980",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى سمر مود",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 580,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3981",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كاب",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 600,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3982",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 840,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3983",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى بون تينو",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3984",
+      "merchantCode": "",
+      "name": "تيشيرت اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 790,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3985",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 990,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3986",
+      "merchantCode": "",
+      "name": "توينزاوﻻدى جولد",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 935,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3987",
+      "merchantCode": "",
+      "name": "طقم اوﻻدى دريم بويز",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 695,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3988",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى ديموس اسكندرية",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 980,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3989",
+      "merchantCode": "",
+      "name": "طقم شورت بناتى ﻻفيتا",
+      "unit": "قطعه",
+      "price": 585,
+      "originalPrice": 770,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3990",
+      "merchantCode": "",
+      "name": "قميص اوﻻدى كاب",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 675,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3991",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى الراعى",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 790,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3992",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى ديموس اسكندرية",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 990,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3993",
+      "merchantCode": "",
+      "name": "طقم اوﻻدى دريم بويز",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 590,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3994",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 875,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3995",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى كاب",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 700,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3996",
+      "merchantCode": "",
+      "name": "توينز اوﻻدى ديموس اسكندرية",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 995,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3997",
+      "merchantCode": "",
+      "name": "طقم اوﻻدى دريم بويز",
+      "unit": "قطعه",
+      "price": 920,
+      "originalPrice": 1200,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "3998",
+      "merchantCode": "",
+      "name": "توينز بناتى ليان",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 690,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "3999",
+      "merchantCode": "",
+      "name": "تيشرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 660,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4000",
+      "merchantCode": "",
+      "name": "تيشرت بناتى دلع",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 570,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4001",
+      "merchantCode": "",
+      "name": "طقم بناتى كراميل",
+      "unit": "قطعه",
+      "price": 980,
+      "originalPrice": 1300,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4002",
+      "merchantCode": "",
+      "name": "طقم بناتى مارشميلو",
+      "unit": "قطعه",
+      "price": 670,
+      "originalPrice": 990,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4003",
+      "merchantCode": "",
+      "name": "طقم بناتى دريم بويز",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 840,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4004",
+      "merchantCode": "",
+      "name": "توينز بناتى ليان",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 995,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4005",
+      "merchantCode": "",
+      "name": "بدله بناتى فيونكة سيلين",
+      "unit": "قطعه",
+      "price": 1250,
+      "originalPrice": 1600,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4006",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى كاب",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 475,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4007",
+      "merchantCode": "",
+      "name": "فستان بناتى دريم بويز",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 740,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4008",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى كوجى جو",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 770,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4009",
+      "merchantCode": "",
+      "name": "بلوزه بناتى ميلون",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 890,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4010",
+      "merchantCode": "",
+      "name": "توينز بناتى فيلو",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 950,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4011",
+      "merchantCode": "",
+      "name": "بدله جينز بناتى ابل",
+      "unit": "قطعه",
+      "price": 1300,
+      "originalPrice": 1700,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4012",
+      "merchantCode": "",
+      "name": "فستان شبك × جينز بناتى بابلز كيدز",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 995,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4013",
+      "merchantCode": "",
+      "name": "طقم بناتى ليان",
+      "unit": "قطعه",
+      "price": 890,
+      "originalPrice": 1200,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4014",
+      "merchantCode": "",
+      "name": "طقم بناتى دريم بويز",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 845,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4015",
+      "merchantCode": "",
+      "name": "بنطلون بناتى ايه بي اس جينز",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4016",
+      "merchantCode": "",
+      "name": "بنطلون بناتى ايه بي اس جينز",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4017",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى محير شاين كيدز",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 700,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4018",
+      "merchantCode": "",
+      "name": "طقم بناتى الوسام",
+      "unit": "قطعه",
+      "price": 1200,
+      "originalPrice": 1500,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4019",
+      "merchantCode": "",
+      "name": "فستان بناتى بيرلى",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 880,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4020",
+      "merchantCode": "",
+      "name": "طقم بناتى ابل",
+      "unit": "قطعه",
+      "price": 870,
+      "originalPrice": 1100,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4021",
+      "merchantCode": "",
+      "name": "تيشرت بناتى مارسيا",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 590,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4022",
+      "merchantCode": "",
+      "name": "تيشرت بناتى مارسيا",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 630,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4023",
+      "merchantCode": "",
+      "name": "تيشرت بناتى ميلون",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 590,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4024",
+      "merchantCode": "",
+      "name": "تيشرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 790,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4025",
+      "merchantCode": "",
+      "name": "سوت كتان بناتى ابل",
+      "unit": "قطعه",
+      "price": 990,
+      "originalPrice": 1250,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4026",
+      "merchantCode": "",
+      "name": "تيشرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 760,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4027",
+      "merchantCode": "",
+      "name": "تيشرت بناتى مارسيا",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 550,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4028",
+      "merchantCode": "",
+      "name": "تيشرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 780,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4029",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى محير شاين كيدز",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 595,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4030",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 380,
+      "originalPrice": 480,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4031",
+      "merchantCode": "",
+      "name": "بلوزه بناتى بوبوسNM",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 670,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4032",
+      "merchantCode": "",
+      "name": "شورت بناتى جومانا",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4033",
+      "merchantCode": "",
+      "name": "شورت بناتى جومانا",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4034",
+      "merchantCode": "",
+      "name": "شورت بناتى ايتن جينز",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4035",
+      "merchantCode": "",
+      "name": "شورت بناتى ايتن جينز",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4036",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى ابا",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 780,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4037",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 620,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4038",
+      "merchantCode": "",
+      "name": "شورت بناتى ايتن جينز",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 440,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4039",
+      "merchantCode": "",
+      "name": "سالوبيت جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 750,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4040",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى مس ميرو",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 680,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4041",
+      "merchantCode": "",
+      "name": "طقم شورت جينز+ تيشيرت فيونكه بناتى تريفا كيدز",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 995,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4042",
+      "merchantCode": "",
+      "name": "تيشرت بناتى تو بى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 830,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4043",
+      "merchantCode": "",
+      "name": "توينز بناتى سلمى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 690,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4044",
+      "merchantCode": "",
+      "name": "تيشرت بناتى كاب",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 435,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4045",
+      "merchantCode": "",
+      "name": "تيشرت بناتى كاب",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 500,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4046",
+      "merchantCode": "",
+      "name": "تيشرت بناتى كاب",
+      "unit": "قطعه",
+      "price": 330,
+      "originalPrice": 425,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4047",
+      "merchantCode": "",
+      "name": "تيشيرت بناتى كاب",
+      "unit": "قطعه",
+      "price": 390,
+      "originalPrice": 670,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4048",
+      "merchantCode": "",
+      "name": "بلوزه بناتى وزان",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 965,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4049",
+      "merchantCode": "",
+      "name": "تيشرت بناتى اية فور",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 690,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4050",
+      "merchantCode": "",
+      "name": "بلوزه عقده بناتى كوجى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 640,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4051",
+      "merchantCode": "",
+      "name": "تيشرت بناتى اية فور",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 520,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4052",
+      "merchantCode": "",
+      "name": "توينز بناتى جويس كيدز",
+      "unit": "قطعه",
+      "price": 790,
+      "originalPrice": 1050,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4053",
+      "merchantCode": "",
+      "name": "توينز بناتى جويس كيدز",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 860,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4054",
+      "merchantCode": "",
+      "name": "بلوزه بناتى ميلون",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 810,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4055",
+      "merchantCode": "",
+      "name": "تيشرت بناتى مارسيا",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 770,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4056",
+      "merchantCode": "",
+      "name": "تيشرت بناتى تو بى",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 560,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4057",
+      "merchantCode": "",
+      "name": "تيشرت بناتى تو بى",
+      "unit": "قطعه",
+      "price": 440,
+      "originalPrice": 580,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4058",
+      "merchantCode": "",
+      "name": "تيشرت بناتى تو بى",
+      "unit": "قطعه",
+      "price": 475,
+      "originalPrice": 630,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4059",
+      "merchantCode": "",
+      "name": "تيشرت اوﻻدى تو بى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 650,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4060",
+      "merchantCode": "",
+      "name": "تيشرت بناتى بوبو",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 770,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4061",
+      "merchantCode": "",
+      "name": "توينز بناتى ليان",
+      "unit": "قطعه",
+      "price": 670,
+      "originalPrice": 995,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4062",
+      "merchantCode": "",
+      "name": "توينز بناتى ليان",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 710,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4063",
+      "merchantCode": "",
+      "name": "بلوزه بناتى دودو كيدز",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 550,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4064",
+      "merchantCode": "",
+      "name": "تيشرت بناتى بوبو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 790,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4065",
+      "merchantCode": "",
+      "name": "ترنج بناتى بينجو",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 585,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4066",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى مكاو",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 850,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4067",
+      "merchantCode": "",
+      "name": "ترنج بناتى جوى بى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 730,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4068",
+      "merchantCode": "",
+      "name": "ترنج بناتى بينجو",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 565,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4069",
+      "merchantCode": "",
+      "name": "ترنج بناتى بينجو",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 595,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4070",
+      "merchantCode": "",
+      "name": "ترنج بناتى كيوت كيدز",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 755,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4071",
+      "merchantCode": "",
+      "name": "ترنج بناتى مكاو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 705,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4072",
+      "merchantCode": "",
+      "name": "ترنج بناتى بيبى دريم",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 965,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4073",
+      "merchantCode": "",
+      "name": "ترنج بناتى فلافى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 830,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4074",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى جوى بى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 570,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4075",
+      "merchantCode": "",
+      "name": "ترنج بناتى بيرلى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 785,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4076",
+      "merchantCode": "",
+      "name": "ترنج بناتى بامبوﻻ",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 885,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4077",
+      "merchantCode": "",
+      "name": "ترنج بناتى ﻻرينو ترينج",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 980,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4078",
+      "merchantCode": "",
+      "name": "سوت اوﻻدى بامبوﻻ",
+      "unit": "قطعه",
+      "price": 790,
+      "originalPrice": 1000,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4079",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 950,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4080",
+      "merchantCode": "",
+      "name": "ترنج بناتى ﻻرينو ترينج",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 870,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4081",
+      "merchantCode": "",
+      "name": "ترنج بناتى جوى بى",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 805,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4082",
+      "merchantCode": "",
+      "name": "ترنج بناتى Bengo",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 600,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4083",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 675,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4084",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 635,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4085",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 630,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4086",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 675,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4087",
+      "merchantCode": "",
+      "name": "ترنج بناتى رينبو",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 665,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4088",
+      "merchantCode": "",
+      "name": "طقم اوﻻدى 3 ق رينبو",
+      "unit": "قطعه",
+      "price": 850,
+      "originalPrice": 1100,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4089",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى بونجورنو",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 895,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4090",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كودى",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 870,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4091",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى فادو",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 660,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4092",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى اﻻنطونى",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 925,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4093",
+      "merchantCode": "",
+      "name": "ترنج بناتى بينجو",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 460,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4094",
+      "merchantCode": "",
+      "name": "ترنج بناتى بينجو",
+      "unit": "قطعه",
+      "price": 350,
+      "originalPrice": 470,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4095",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى فانى كيدز",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 735,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4096",
+      "merchantCode": "",
+      "name": "ترنج بناتى كودى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 1000,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4097",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كودى",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 870,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4098",
+      "merchantCode": "",
+      "name": "ترنج بناتى دكتور كيدز",
+      "unit": "قطعه",
+      "price": 800,
+      "originalPrice": 1000,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4099",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى اﻻنطونى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 955,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4100",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى بونجورنو",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 885,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4101",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 730,
+      "originalPrice": 950,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4102",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1100,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4103",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 900,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4104",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 830,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4105",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 945,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4106",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 770,
+      "originalPrice": 1000,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4107",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 880,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4108",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 970,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4109",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى بامبوﻻ",
+      "unit": "قطعه",
+      "price": 730,
+      "originalPrice": 970,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4110",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 950,
+      "originalPrice": 1250,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4111",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 880,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4112",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كابلز كيدز",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 675,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4113",
+      "merchantCode": "",
+      "name": "ترنج بناتى بيرلى",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 830,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4114",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى بيرلى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 950,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4115",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1100,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4116",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1100,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4117",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1200,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4118",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1200,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4119",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 1000,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4120",
+      "merchantCode": "",
+      "name": "ترنج بناتى رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 665,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4121",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 990,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4122",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 850,
+      "originalPrice": 1100,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4123",
+      "merchantCode": "",
+      "name": "ترنج بناتى رينبو",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 805,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4124",
+      "merchantCode": "",
+      "name": "ترنج بناتى رينبو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 875,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4125",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 875,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4126",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 810,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4127",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى هابى بوى",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 740,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4128",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 800,
+      "originalPrice": 1050,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4129",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 950,
+      "originalPrice": 1250,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4130",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 850,
+      "originalPrice": 1050,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4131",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 865,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4132",
+      "merchantCode": "",
+      "name": "ترنج بناتى تيا كيدز",
+      "unit": "قطعه",
+      "price": 630,
+      "originalPrice": 810,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4133",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى تيا كيدز",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 630,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4134",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 845,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4135",
+      "merchantCode": "",
+      "name": "ترنج بناتى رينبو",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 865,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4136",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 885,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4137",
+      "merchantCode": "",
+      "name": "ترنج بناتى توب فاشون",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1100,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4138",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 880,
+      "originalPrice": 1100,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4139",
+      "merchantCode": "",
+      "name": "سوت اوﻻدى شورهابى بوى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 955,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4140",
+      "merchantCode": "",
+      "name": "سوت اوﻻدى شورت هابى بوى",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 1000,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4141",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 895,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4142",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 885,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4143",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 835,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4144",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 910,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4145",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 905,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4146",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 875,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4147",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 925,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4148",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 880,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4149",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 850,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4150",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 745,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4151",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 730,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4152",
+      "merchantCode": "",
+      "name": "ترنج بناتى هابى بوى",
+      "unit": "قطعه",
+      "price": 570,
+      "originalPrice": 715,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4153",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى رينبو",
+      "unit": "قطعه",
+      "price": 650,
+      "originalPrice": 850,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4154",
+      "merchantCode": "",
+      "name": "ترنج اوﻻدى كارلوس",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 900,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4156",
+      "merchantCode": "",
+      "name": "طقم شماعة مواليد مستر هيرو",
+      "unit": "قطعه",
+      "price": 360,
+      "originalPrice": 470,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4157",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 915,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4158",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 920,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4159",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 1000,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4160",
+      "merchantCode": "",
+      "name": "ترنج اولادى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 960,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4161",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 850,
+      "originalPrice": 1100,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4162",
+      "merchantCode": "",
+      "name": "ترنج أطفال الدولية فلافور",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 915,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4167",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى كارلوس",
+      "unit": "قطعه",
+      "price": 530,
+      "originalPrice": 670,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4168",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى لايك",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 690,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4169",
+      "merchantCode": "",
+      "name": "بنطلون اولادى ميركيل",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "4170",
+      "merchantCode": "",
+      "name": "شورت اولادى دريم بويز",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4171",
+      "merchantCode": "",
+      "name": "شورت جينز اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 580,
+      "originalPrice": 580,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4172",
+      "merchantCode": "",
+      "name": "شروال اولادى ميركيل",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "4173",
+      "merchantCode": "",
+      "name": "شورت جينز اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4174",
+      "merchantCode": "",
+      "name": "بنطلون اولادى دراجون جينز",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "4175",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى اية فور",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4176",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى اية فور",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4177",
+      "merchantCode": "",
+      "name": "شورت اولادى دريم بويز",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4178",
+      "merchantCode": "",
+      "name": "ترنج بناتى جى ار GR",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 995,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4179",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 940,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4180",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 945,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4181",
+      "merchantCode": "",
+      "name": "ترنج بناتى 3 ق رينبو",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 640,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4182",
+      "merchantCode": "",
+      "name": "سوت بناتى بتك",
+      "unit": "قطعه",
+      "price": 770,
+      "originalPrice": 965,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4183",
+      "merchantCode": "",
+      "name": "ترنج اولادى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 945,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4184",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 720,
+      "originalPrice": 960,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4185",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 750,
+      "originalPrice": 975,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4186",
+      "merchantCode": "",
+      "name": "ترنج بناتى بتك",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 895,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4187",
+      "merchantCode": "",
+      "name": "طقم شماعة مواليد مشكل مستر هيرو",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 560,
+      "group": "اولادى بيتى"
+    },
+    {
+      "itemCode": "4188",
+      "merchantCode": "",
+      "name": "ترنج أطفال الدولية فلافور",
+      "unit": "قطعه",
+      "price": 685,
+      "originalPrice": 880,
+      "group": "بناتى بيتى"
+    },
+    {
+      "itemCode": "4189",
+      "merchantCode": "",
+      "name": "بنطلون جينز بناتى ميس ميرو",
+      "unit": "قطعه",
+      "price": 620,
+      "originalPrice": 620,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4190",
+      "merchantCode": "",
+      "name": "تيشبرت اولادى روسى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 670,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4191",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى ابل (A)",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 640,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4192",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى ابل (A)",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 635,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4193",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى اجياد",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 605,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4194",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى اجياد",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 630,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4195",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى اجياد",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4196",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى ابل (A)",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4197",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى تو ام",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 635,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4198",
+      "merchantCode": "",
+      "name": "توينز اولادى وسط كيكو كيدز",
+      "unit": "قطعه",
+      "price": 690,
+      "originalPrice": 875,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4199",
+      "merchantCode": "",
+      "name": "طقم اولادى فالكون",
+      "unit": "قطعه",
+      "price": 1100,
+      "originalPrice": 1395,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4200",
+      "merchantCode": "",
+      "name": "طقم شورت اولادى كامب كيدز",
+      "unit": "قطعه",
+      "price": 995,
+      "originalPrice": 1305,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4201",
+      "merchantCode": "",
+      "name": "طقم شورت اولادى كامب كيدز",
+      "unit": "قطعه",
+      "price": 990,
+      "originalPrice": 1255,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4202",
+      "merchantCode": "",
+      "name": "بنطلون جبردين اولادى بنطلونى",
+      "unit": "قطعه",
+      "price": 600,
+      "originalPrice": 600,
+      "group": "بنطلونات اولادى"
+    },
+    {
+      "itemCode": "4203",
+      "merchantCode": "",
+      "name": "بنتاكور جبردين اولادى بنطلونى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 550,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4204",
+      "merchantCode": "",
+      "name": "شورت اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4205",
+      "merchantCode": "",
+      "name": "شورت اولادى سان جورج",
+      "unit": "قطعه",
+      "price": 470,
+      "originalPrice": 470,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4206",
+      "merchantCode": "",
+      "name": "شورت بيبى سان جورج",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4207",
+      "merchantCode": "",
+      "name": "شورت اولادى لايك",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4208",
+      "merchantCode": "",
+      "name": "شورت اولادى لايك",
+      "unit": "قطعه",
+      "price": 420,
+      "originalPrice": 420,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4209",
+      "merchantCode": "",
+      "name": "شورت اولادى لايك",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 400,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4210",
+      "merchantCode": "",
+      "name": "شورت اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 520,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4211",
+      "merchantCode": "",
+      "name": "شورت اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 490,
+      "originalPrice": 490,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4212",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى براند كلوب",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 550,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4213",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى براند كلوب",
+      "unit": "قطعه",
+      "price": 460,
+      "originalPrice": 575,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4214",
+      "merchantCode": "",
+      "name": "شورت جينز اولادى اتش اند ام",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4215",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى فيموس",
+      "unit": "قطعه",
+      "price": 425,
+      "originalPrice": 590,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4216",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى فيموس",
+      "unit": "قطعه",
+      "price": 425,
+      "originalPrice": 540,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4217",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى فيموس",
+      "unit": "قطعه",
+      "price": 400,
+      "originalPrice": 500,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4218",
+      "merchantCode": "",
+      "name": "جوليانا برمودا اولادى",
+      "unit": "قطعه",
+      "price": 585,
+      "originalPrice": 585,
+      "group": "شورت و بنتاكور"
+    },
+    {
+      "itemCode": "4219",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى فور ايفر",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 660,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4220",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى لايك",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 680,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4221",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى روسى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4222",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى روسى",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4223",
+      "merchantCode": "",
+      "name": "تيشيرت اولادى لايك",
+      "unit": "قطعه",
+      "price": 500,
+      "originalPrice": 620,
+      "group": "اولادى خروج"
+    },
+    {
+      "itemCode": "4224",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 660,
+      "originalPrice": 660,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4225",
+      "merchantCode": "",
+      "name": "مس ميرو بنطلون جينز بناتى",
+      "unit": "قطعه",
+      "price": 680,
+      "originalPrice": 680,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4226",
+      "merchantCode": "",
+      "name": "شاين كبدز بنطلون كتان بناتى",
+      "unit": "قطعه",
+      "price": 430,
+      "originalPrice": 430,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4227",
+      "merchantCode": "",
+      "name": "جومانا بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 480,
+      "originalPrice": 480,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4228",
+      "merchantCode": "",
+      "name": "جومانا بنطلون بناتى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 450,
+      "group": "بنطلونات بناتى"
+    },
+    {
+      "itemCode": "4229",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 660,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4230",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 720,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4231",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 660,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4232",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 520,
+      "originalPrice": 660,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4233",
+      "merchantCode": "",
+      "name": "براند كلوب تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 550,
+      "originalPrice": 690,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4234",
+      "merchantCode": "",
+      "name": "ميلون تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 600,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "4235",
+      "merchantCode": "",
+      "name": "ميلون تيشيرت بناتى",
+      "unit": "قطعه",
+      "price": 450,
+      "originalPrice": 600,
+      "group": "بناتى خروج"
+    },
+    {
+      "itemCode": "736",
+      "merchantCode": "",
+      "name": "",
+      "unit": "حبة",
+      "price": 0,
+      "originalPrice": 0,
+      "group": "عام"
+    }
+  ],
+  "offers": [
+    {
+      "id": "o1",
+      "title": "خصم 30% على كل الأحذية",
+      "subtitle": "أحذية رياضية وكلاسيك — لفترة محدودة",
+      "emoji": "👟",
+      "color": "#dc2626"
+    },
+    {
+      "id": "o2",
+      "title": "العروض الأسبوعية",
+      "subtitle": "وفّر أكثر على البقالة والمشروبات",
+      "emoji": "🔥",
+      "color": "#f59e0b"
+    },
+    {
+      "id": "o3",
+      "title": "اشترِ 2 واحصل على 1",
+      "subtitle": "على العصائر والمشروبات الغازية",
+      "emoji": "🎁",
+      "color": "#2563eb"
+    }
+  ],
+  "discounts": [
+    {
+      "id": "d1",
+      "group": "أحذية",
+      "percentage": 30,
+      "active": true
+    }
+  ],
+  "settings": {
+    "displayDuration": 8,
+    "soundEnabled": true,
+    "errorSoundEnabled": true,
+    "adminPassword": "1234",
+    "roundTo5": true
+  },
+  "theme": {
+    "shopName": "pandystore",
+    "shopLogo": "",
+    "primaryColor": "#15803d",
+    "accentColor": "#f59e0b",
+    "bgColor": "#fffdf5"
+  }
+}
