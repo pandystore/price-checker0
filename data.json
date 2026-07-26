@@ -6666,7 +6666,7 @@
     }
   ],
   "settings": {
-    "displayDuration": 12,
+    "displayDuration": 10,
     "soundEnabled": true,
     "errorSoundEnabled": true,
     "adminPassword": "1234",
