@@ -6692,7 +6692,7 @@
       "username": "test1",
       "passwordHash": "bbb59da3af939f7af5f360f2ceb80a496e3bae1cd87dde426db0ae40677e1c2c",
       "role": "staff",
-      "blocked": false
+      "blocked": true
     }
   ]
 }
