@@ -9,6 +9,7 @@ import Scanner from "./components/Scanner";
 import SearchBox from "./components/SearchBox";
 import { useStore } from "./hooks/useStore";
 import { shade } from "./utils/color";
+import { pullFromGitHub } from "./utils/github";
 import { computePrice, findProducts, formatEGP } from "./utils/pricing";
 import { playError, playFound } from "./utils/sound";
 import type { Product } from "./types";
@@ -28,7 +29,7 @@ const FLOATY = [
 
 export default function App() {
   const store = useStore();
-  const { data } = store;
+  const { data, replaceAll } = store;
 
   const [booted, setBooted] = useState(false);
   const [query, setQuery] = useState("");
@@ -48,6 +49,25 @@ export default function App() {
     const t = setTimeout(() => setBooted(true), 2400);
     return () => clearTimeout(t);
   }, []);
+
+  // مزامنة تلقائية مع GitHub: عند فتح التطبيق ثم كل بضع دقائق،
+  // حتى تظهر آخر تحديثات الأسعار على كل الأجهزة دون الحاجة لفتح
+  // لوحة التحكم والضغط على "تنزيل" يدويًا.
+  const { owner, repo, branch, path } = data.github;
+  useEffect(() => {
+    if (!owner || !repo || adminOpen) return;
+    let cancelled = false;
+    async function sync() {
+      const r = await pullFromGitHub({ owner, repo, branch, path, token: "" });
+      if (!cancelled && r.data) replaceAll(r.data);
+    }
+    sync();
+    const id = window.setInterval(sync, 3 * 60 * 1000);
+    return () => {
+      cancelled = true;
+      clearInterval(id);
+    };
+  }, [owner, repo, branch, path, adminOpen, replaceAll]);
 
   // البحث الحي أثناء الكتابة
   useEffect(() => {
