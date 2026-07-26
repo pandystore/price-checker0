@@ -6686,13 +6686,6 @@
       "passwordHash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
       "role": "admin",
       "blocked": false
-    },
-    {
-      "id": "ismr51i",
-      "username": "test1",
-      "passwordHash": "bbb59da3af939f7af5f360f2ceb80a496e3bae1cd87dde426db0ae40677e1c2c",
-      "role": "staff",
-      "blocked": true
     }
   ]
 }
