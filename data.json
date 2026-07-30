@@ -6663,6 +6663,12 @@
       "group": "بنطلونات اولادى",
       "percentage": 30,
       "active": true
+    },
+    {
+      "id": "aeh9ijp",
+      "group": "بناتى بيتى",
+      "percentage": 30,
+      "active": true
     }
   ],
   "settings": {
@@ -6677,7 +6683,8 @@
     "shopLogo": "",
     "primaryColor": "#15803d",
     "accentColor": "#f59e0b",
-    "bgColor": "#fffdf5"
+    "bgColor": "#fffdf5",
+    "logoSize": 48
   },
   "users": [
     {
