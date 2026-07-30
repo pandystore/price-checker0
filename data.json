@@ -6669,6 +6669,12 @@
       "group": "بناتى بيتى",
       "percentage": 30,
       "active": true
+    },
+    {
+      "id": "im02fl3",
+      "group": "اولادى بيتى",
+      "percentage": 30,
+      "active": true
     }
   ],
   "settings": {
